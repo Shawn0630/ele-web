@@ -1,17 +1,11 @@
-# ts-react-redux-webpack-starter
-> Starter project for technology stacks
+# ele-web
+> A ele-like online meal ordering platform. 
 >  + **Framwork:** React-Redux
 >  + **Language:** Typescript
 >  + **Design:** Material-ui
 >  + **Style Management:** SCSS
 >  + **Deploy tool:** Webpack
 
-## Getting started
-1. Clone project to your directory
-```
-git clone https://github.com/Shawn0630/ts-react-redux-webpack-starter.git <project name>
-```
-replace `project name` to your project name.
 ## Running the project
 1. install dependencies
 ```
