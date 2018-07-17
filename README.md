@@ -4,6 +4,7 @@
 >  + **Language:** Typescript
 >  + **Design:** Material-ui
 >  + **Style Management:** SCSS
+>  + **Database:** MongoDB
 >  + **Deploy tool:** Webpack
 
 ## Running the project
