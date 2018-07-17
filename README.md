@@ -1,5 +1,5 @@
 # ele-web
-> A ele-like online meal ordering platform. 
+> A ele-like online ordering platform. 
 >  + **Framwork:** React-Redux
 >  + **Language:** Typescript
 >  + **Design:** Material-ui
