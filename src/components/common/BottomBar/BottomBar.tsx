@@ -1,15 +1,10 @@
 import * as React from "react";
 import { RouteComponentProps} from "react-router-dom";
 import * as styles from "../../../styles/bottom-bar.scss";
+import { Component } from "../../../models/Component";
 
 interface BottomBarProps {
-    bottomChoose: BottomChooseType;
-}
-enum BottomChooseType {
-    TAKEAWAY = "takeaway",
-    SEARCH = "search",
-    ORDER = "order",
-    USER = "user"
+    component: Component;
 }
 
 class BottomBar extends React.Component<BottomBarProps> {
@@ -23,7 +18,7 @@ class BottomBar extends React.Component<BottomBarProps> {
             <div id="bottomBar" className={styles.bottomBar}>
                 <div>
                 {
-                    this.props.bottomChoose === BottomChooseType.TAKEAWAY ?
+                this.props.component === Component.TAKEAWAY ?
                     (<span className={styles.takeawayBlue}></span>) :
                     (<span className={styles.takeawayGrey}></span>)
                 }
@@ -31,7 +26,7 @@ class BottomBar extends React.Component<BottomBarProps> {
                 </div>
                 <div>
                 {
-                    this.props.bottomChoose === BottomChooseType.SEARCH ?
+                this.props.component === Component.SEARCH ?
                     (<span className={styles.searchBlue}></span>) :
                     (<span className={styles.searchGrey}></span>)
                 }
@@ -39,7 +34,7 @@ class BottomBar extends React.Component<BottomBarProps> {
                 </div>
                 <div>
                 {
-                    this.props.bottomChoose === BottomChooseType.ORDER ?
+                this.props.component === Component.ORDER ?
                     (<span className={styles.orderBlue}></span>) :
                     (<span className={styles.orderGrey}></span>)
                 }
@@ -47,7 +42,7 @@ class BottomBar extends React.Component<BottomBarProps> {
                 </div>
                 <div>
                 {
-                    this.props.bottomChoose === BottomChooseType.USER ?
+                this.props.component === Component.USER ?
                     (<span className={styles.userBlue}></span>) :
                     (<span className={styles.userGrey}></span>)
                 }
@@ -59,4 +54,4 @@ class BottomBar extends React.Component<BottomBarProps> {
 
 }
 
-export {BottomBar, BottomChooseType};
+export {BottomBar};
