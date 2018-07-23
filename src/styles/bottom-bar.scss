@@ -1,0 +1,57 @@
+.bottomBar {
+  z-index: 1000;
+  width: 100%;
+  height: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 -0.02667rem 0.05333rem rgba(0, 0, 0, 0.1);
+  div {
+    height: 100%;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: .45rem;
+      color: #666666;
+      margin-top: .2rem;
+    }
+    span {
+      display: inline-block;
+      background: 0 0 no-repeat;
+      background-size: 100%;
+      width: .8rem;
+      height: .8rem;
+    }
+  }
+  .takeawayBlue {
+    background-image: url("./images/eleme-blue.png");
+  }
+  .takeawayGrey {
+    background-image: url("./images/eleme-grey.png");
+  }
+  .searchBlue {
+    background-image: url("./images/navigation-blue.png");
+  }
+  .searchGrey {
+    background-image: url("./images/navigation-grey.png");
+  }
+  .orderBlue {
+    background-image: url("./images/bill-blue.png");
+  }
+  .orderGrey {
+    background-image: url("./images/bill-grey.png");
+  }
+  .userBlue {
+    background-image: url("./images/user-blue.png");
+  }
+  .userGrey {
+    background-image: url("./images/user-grey.png");
+  }
+}

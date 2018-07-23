@@ -1,16 +1,14 @@
 import * as React from "react";
+import { Provider } from "react-redux";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import {ScatterChart} from "../D3/ScatterChart";
 import {App} from "../App";
+import {Takeaway} from "../takeaway/Takeaway";
 
 class Root extends React.PureComponent<{}> {
 
     public render(): JSX.Element {
-        return <Router basename={process.env.PUBLIC_URL}>
-            <div id="content">
-                <Route path="/" exact={true} component={App}/>
-                <Route path="/scatter" exact={true} component={ScatterChart}/>
-            </div>
+        return <Router>
+            <Route path="/" exact={true} component={Takeaway}/>
         </Router>;
     }
 }

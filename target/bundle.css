@@ -1,55 +1,76 @@
-.chart__tooltip___1SOrR {
-  background: lightyellow;
-  border: 1px solid black;
-  padding: 3px;
-  font-size: 12px;
-  position: absolute;
-  pointer-events: none;
-  z-index: 100000; }
+.top-bar__topBar___Jva1F {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 1.95rem;
+  top: 0;
+  left: 0;
+  background-color: #3190E8;
+  text-align: center;
+  line-height: 1.95rem; }
+  .top-bar__topBar___Jva1F span {
+    font-size: 0.8rem;
+    color: #FFFFFF; }
+  .top-bar__topBar___Jva1F div {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: 0 0 no-repeat;
+    background-size: 100%;
+    top: 0.575rem; }
+  .top-bar__topBar___Jva1F .top-bar__account-icon___1ImF5 {
+    right: 0.8rem;
+    background-image: url(/images/account.png); }
+  .top-bar__topBar___Jva1F .top-bar__search-icon___3yU5T {
+    left: 0.8rem;
+    background-image: url(/images/search.png); }
+  .top-bar__topBar___Jva1F .top-bar__back-icon___riiAT {
+    left: 0.8rem;
+    background-image: url(/images/back.png); }
+.bottom-bar__bottomBar___eAS9m {
+  z-index: 1000;
+  width: 100%;
+  height: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 -0.02667rem 0.05333rem rgba(0, 0, 0, 0.1); }
+  .bottom-bar__bottomBar___eAS9m div {
+    height: 100%;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .bottom-bar__bottomBar___eAS9m div p {
+      font-size: .45rem;
+      color: #666666;
+      margin-top: .2rem; }
+    .bottom-bar__bottomBar___eAS9m div span {
+      display: inline-block;
+      background: 0 0 no-repeat;
+      background-size: 100%;
+      width: .8rem;
+      height: .8rem; }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__takeawayBlue___1tcXU {
+    background-image: url(/images/eleme-blue.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__takeawayGrey___1c-g6 {
+    background-image: url(/images/eleme-grey.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__searchBlue___i-7ZX {
+    background-image: url(/images/navigation-blue.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__searchGrey___3ocqW {
+    background-image: url(/images/navigation-grey.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__orderBlue___5abXl {
+    background-image: url(/images/bill-blue.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__orderGrey___176yY {
+    background-image: url(/images/bill-grey.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__userBlue___3NfaY {
+    background-image: url(/images/user-blue.png); }
+  .bottom-bar__bottomBar___eAS9m .bottom-bar__userGrey___1VWln {
+    background-image: url(/images/user-grey.png); }
 
-.chart__scatter___1RajZ line {
-  stroke-opacity: 0.25;
-  stroke: black;
-  stroke-dasharray: 1, 1; }
-
-.chart__valueLine___2lU0L {
-  stroke: "#51CB3F";
-  stroke-linecap: "round";
-  stroke-width: 6; }
-
-.chart__emptyLine___u1BZf {
-  stroke: "#ECECEC";
-  stroke-linecap: "round";
-  stroke-width: 6; }
-
-.chart__valueCircle___TKEKK {
-  stroke: "black";
-  stroke-width: 1.0;
-  fill: "white"; }
-.app__app___3xtY4 {
-  text-align: center; }
-
-.app__appLogo___3zMFu {
-  animation: app__app-logo-spin___2BsZ0 infinite 20s linear;
-  height: 80px;
-  background: url(/fonts/logo.svg) no-repeat center; }
-
-.app__appHeader___27ApW {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.app__appTitle___1INsI {
-  font-size: 1.5em; }
-
-.app__appIntro___3-kOw {
-  font-size: large; }
-
-@keyframes app__app-logo-spin___2BsZ0 {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidW5kbGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
+/*# sourceMappingURL=bundle.css.map*/
