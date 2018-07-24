@@ -5,51 +5,61 @@ import { Component } from "../../../models/Component";
 
 interface BottomBarProps {
     component: Component;
+
+    toDist(component: Component): void;
 }
 
 class BottomBar extends React.Component<BottomBarProps> {
 
     constructor(props: BottomBarProps) {
         super(props);
+
+        this.toDist = this.toDist.bind(this);
     }
 
     public render(): JSX.Element {
         return (
             <div id="bottomBar" className={styles.bottomBar}>
-                <div>
+                <div onClick={this.toDist(Component.TAKEAWAY)}>
                 {
                 this.props.component === Component.TAKEAWAY ?
                     (<span className={styles.takeawayBlue}></span>) :
                     (<span className={styles.takeawayGrey}></span>)
                 }
-                    <p>外卖</p>
+                    <p>Takeaway</p>
                 </div>
-                <div>
+                <div onClick={this.toDist(Component.SEARCH)}>
                 {
                 this.props.component === Component.SEARCH ?
                     (<span className={styles.searchBlue}></span>) :
                     (<span className={styles.searchGrey}></span>)
                 }
-                    <p>搜索</p>
+                    <p>Search</p>
                 </div>
-                <div>
+                <div onClick={this.toDist(Component.ORDER)}>
                 {
                 this.props.component === Component.ORDER ?
                     (<span className={styles.orderBlue}></span>) :
                     (<span className={styles.orderGrey}></span>)
                 }
-                    <p>订单</p>
+                    <p>Orders</p>
                 </div>
-                <div>
+                <div onClick={this.toDist(Component.USER)}>
                 {
                 this.props.component === Component.USER ?
                     (<span className={styles.userBlue}></span>) :
                     (<span className={styles.userGrey}></span>)
                 }
-                    <p>我的</p>
+                    <p>My</p>
                 </div>
             </div>
         );
+    }
+
+    private toDist(component: Component): (event: React.SyntheticEvent<HTMLDivElement>) => void {
+        return (event: React.SyntheticEvent<HTMLDivElement>): void => {
+            this.props.toDist(component);
+        };
     }
 
 }

@@ -50,19 +50,19 @@ class TopBar extends React.Component<TopBarProps> {
             case Component.SEARCH:
                 return {
                     left: true,
-                    middle: "Search",
+                    middle: "SEARCH",
                     right: false
                 };
             case Component.ORDER:
                 return {
                     left: false,
-                    middle: "Order",
+                    middle: "ORDER",
                     right: true
                 };
             case "user":
                 return {
                     left: false,
-                    middle: "User",
+                    middle: "USER",
                     right: false
                 };
             default:

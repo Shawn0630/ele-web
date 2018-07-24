@@ -1,8 +1,9 @@
 import * as React from "react";
 import { TopBar } from "../common/TopBar/TopBar";
+import { ShopList } from "../common/ShopList/ShopList";
 import { BottomBar } from "../common/BottomBar/BottomBar";
 import { Component, toComponent} from "../../models/Component";
-import { RouteComponentProps } from "react-router-dom";
+import { Route, RouteComponentProps } from "react-router-dom";
 
 interface MainParams {
     component: string;
@@ -24,6 +25,7 @@ class Main extends React.Component<MainProps, MainStates> {
             isTopShow: false
         };
 
+        this.toDist = this.toDist.bind(this);
     }
 
     public render(): JSX.Element {
@@ -32,10 +34,34 @@ class Main extends React.Component<MainProps, MainStates> {
         return (
             <div id="main">
                 <TopBar component={toComponent(component)}></TopBar>
-
-                <BottomBar component={toComponent(component)}></BottomBar>
+                <div>
+                    <Route path="/takeaway" exact={true} component={ShopList}/>
+                </div>
+                <BottomBar component={toComponent(component)} toDist={this.toDist}></BottomBar>
             </div>
         );
+    }
+
+    private toDist(component: Component): void {
+        let url: string;
+        switch (component) {
+            case Component.TAKEAWAY:
+                 url  = "/takeaway";
+                 break;
+            case Component.SEARCH:
+                 url = "/search";
+                 break;
+            case Component.ORDER:
+                 url = "/order";
+                 break;
+            case Component.USER:
+                 url = "/user";
+                 break;
+            default:
+                 url = "/takeaway";
+
+        }
+        this.props.history.push(url);
     }
 
 }
