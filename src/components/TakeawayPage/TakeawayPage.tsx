@@ -1,23 +1,31 @@
 import * as React from "react";
 import * as styles from "../../styles/takeaway.scss";
+import { Shop } from "../../models/Shop";
+import { Variety } from "../../models/Variety";
 import { ShopList } from "../common/ShopList/ShopList";
 import { VarietyList } from "../common/VarietyList/VarietyList";
 import { Component, toComponent } from "../../models/Component";
 import { Route, RouteComponentProps } from "react-router-dom";
 
-import { mock as mockShopDetails } from "../../models/ShopDetail";
-import { mock as mockVarietyDetails } from "../../models/VarietyDetail";
-
 interface TakeawayPageParams {
+
 }
 
-interface StateProps { }
+interface StateProps {
+    shops: Shop[];
+    varieties: Variety[];
+}
+
+interface DispatchProps {
+    getShopList(): void;
+    getVarietyList(): void;
+}
 
 interface TakeawayPageStates {
     isTopShow: boolean;
 }
 
-interface TakeawayPageProps extends StateProps, RouteComponentProps<TakeawayPageParams> { }
+interface TakeawayPageProps extends StateProps, DispatchProps, RouteComponentProps<TakeawayPageParams> { }
 
 class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates> {
     constructor(props: TakeawayPageProps) {
@@ -25,16 +33,23 @@ class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates
         this.state = {
             isTopShow: false
         };
+
+        this.props.getShopList();
+        this.props.getVarietyList();
     }
 
     public render(): JSX.Element {
+        if (this.props.shops == null || this.props.varieties == null) {
+            return null;
+        }
+
         return <div className={styles.takeawayContainer} ref="takeaway">
-                <VarietyList varietyDetails={mockVarietyDetails}></VarietyList>
+                <VarietyList varietyDetails={this.props.varieties}></VarietyList>
                 <div className={styles.interval}></div>
-                <ShopList shopLists={mockShopDetails}></ShopList>
+                <ShopList shops={this.props.shops}></ShopList>
                 {this.state.isTopShow && <div className={styles.topIcon}></div>}
             </div>;
     }
 }
 
-export {TakeawayPage};
+export {TakeawayPage, StateProps, DispatchProps};

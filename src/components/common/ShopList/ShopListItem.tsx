@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as styles from "../../../styles/shop-list.scss";
-import { Promotion, PromotionType, ShopDetail } from "../../../models/ShopDetail";
+import { Promotion, PromotionType, Shop } from "../../../models/Shop";
 
 interface ShopListItemProps {
-    shopListItem: ShopDetail;
+    shopListItem: Shop;
 }
 
 class ShopListItem extends React.Component<ShopListItemProps> {

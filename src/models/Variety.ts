@@ -1,9 +1,9 @@
-interface VarietyDetail {
+interface Variety {
     name: string;
     imgUrl: string;
 }
 
-const mock: VarietyDetail[] = [
+const mock: Variety[] = [
     {
         name: "甜品饮品",
         imgUrl: "https://fuss10.elemecdn.com/2/35/696aa5cf9820adada9b11a3d14bf5jpeg.jpeg"
@@ -38,4 +38,4 @@ const mock: VarietyDetail[] = [
     }
 ];
 
-export {VarietyDetail, mock};
+export {Variety, mock};

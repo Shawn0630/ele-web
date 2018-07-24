@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as styles from "../../../styles/shop-list.scss";
 import { ShopListItem } from "./ShopListItem";
-import { ShopDetail } from "../../../models/ShopDetail";
+import { Shop } from "../../../models/Shop";
 
 interface ShopListProps {
-    shopLists: ShopDetail[];
+    shops: Shop[];
 }
 
 class ShopList extends React.Component<ShopListProps> {
@@ -14,7 +14,7 @@ class ShopList extends React.Component<ShopListProps> {
 
     public render(): JSX.Element {
         return <div className={styles.shopList}> {
-            this.props.shopLists.map((item: ShopDetail, index: number) => {
+            this.props.shops.map((item: Shop, index: number) => {
                 return <ShopListItem shopListItem={item}/>;
             })
         }

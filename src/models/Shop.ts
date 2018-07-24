@@ -1,4 +1,4 @@
-interface ShopDetail {
+interface Shop {
     imgUrl: string;
     isBrand: boolean;
     shopName: string;
@@ -29,7 +29,7 @@ interface Promotion {
     slogan: string;
 }
 
-const mock: ShopDetail[] = [
+const mock: Shop[] = [
     {
         imgUrl: "http://images.cangdu.org/15cf6c700bb2135.jpg",
         isBrand: true,
@@ -262,4 +262,4 @@ const mock: ShopDetail[] = [
     }
     ];
 
-export {ShopDetail, PromotionType, Promotion, mock};
+export {Shop, PromotionType, Promotion, mock};

@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as styles from "../../../styles/variety-list.scss";
-import { mock, VarietyDetail} from "../../../models/VarietyDetail";
+import { mock, Variety} from "../../../models/Variety";
 
 interface VarietyProps {
-    varietyDetails: VarietyDetail[];
+    varietyDetails: Variety[];
 }
 
 class VarietyList extends React.Component<VarietyProps> {
@@ -13,12 +13,9 @@ class VarietyList extends React.Component<VarietyProps> {
     }
 
     public render(): JSX.Element {
-
-        console.log(mock);
-
         return <ul id="varietyList" className={styles.varietyList}>
                 {
-                    this.props.varietyDetails.map((item: VarietyDetail, index: number) => {
+                    this.props.varietyDetails.map((item: Variety, index: number) => {
                         return (
                             <li key={index}>
                                 <img src={item.imgUrl} />
