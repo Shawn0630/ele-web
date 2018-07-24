@@ -27,6 +27,168 @@
   .top-bar__topBar___Jva1F .top-bar__back-icon___riiAT {
     left: 0.8rem;
     background-image: url(/images/back.png); }
+.shop-list__shopList___2eEa2 {
+  background-color: #FFFFFF; }
+  .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 {
+    padding: 0.7rem 0.4rem;
+    border-bottom: 0.025rem solid #f1f1f1;
+    position: relative; }
+    .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 {
+      display: flex;
+      flex-direction: row; }
+      .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX {
+        display: flex;
+        flex: 1 0 auto; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-img___U3Wh9 img {
+          width: 2.7rem;
+          height: 2.7rem;
+          margin-right: .4rem; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__new-shop___1Bwvs {
+          width: 1.5rem;
+          height: 1.5rem;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-image: linear-gradient(135deg, #26ce61, #26ce61 50%, transparent 0);
+          background-image: -webkit-linear-gradient(315deg, #26ce61, #26ce61 50%, transparent 0); }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__new-shop___1Bwvs span {
+            position: absolute;
+            top: 0.1rem;
+            display: block;
+            color: #fff;
+            font-size: .24rem;
+            -webkit-transform: rotate(-45deg) scale(0.8);
+            transform: rotate(-45deg) scale(0.8); }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-title___2oEMx {
+          color: #333333;
+          margin-bottom: .5rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-title___2oEMx .shop-list__brand___XvU_U {
+            display: inline-block;
+            background-color: #FFD930;
+            font-size: .5rem;
+            border-radius: .1rem;
+            margin-right: .2rem;
+            padding: 0 0.1rem;
+            vertical-align: middle; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-title___2oEMx .shop-list__shop-name___1hIG0 {
+            display: inline-block;
+            font-size: .65rem;
+            font-weight: 700;
+            vertical-align: middle; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs {
+          position: relative; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs .shop-list__empty-stars___Ln4l_ {
+            background: url(/images/color-stars_empty.png) no-repeat;
+            background-size: cover;
+            width: 2.8rem;
+            height: .4rem;
+            position: absolute;
+            top: 0.15rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs div.shop-list__full-stars___3Bky3 {
+            background: url(/images/color-stars_full.png) no-repeat;
+            background-size: cover;
+            width: 0rem;
+            height: .4rem;
+            position: absolute;
+            top: 0.15rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs span {
+            font-size: .4rem;
+            display: inline-block; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs span.shop-list__star-num___2byBN {
+            color: #FF6000;
+            margin-left: 3rem;
+            margin-right: .2rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs span.shop-list__month-sale___Ulm5N {
+            color: #666666;
+            transform: scale(0.9); }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 .shop-list__left___zPSVX .shop-list__shop-mes___20N8r .shop-list__shop-score___1weZs p {
+            margin-top: .3rem;
+            color: #666666;
+            font-size: .5rem;
+            transform: scale(0.9); }
+      .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF div.shop-list__shop-service___2Up55 {
+          margin-bottom: .5rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF div.shop-list__shop-service___2Up55 span {
+            font-size: .5rem;
+            color: #999999;
+            border: 0.025rem solid #F1F1F1;
+            padding: 0 0.04rem;
+            border-radius: 0.08rem;
+            display: inline-block;
+            transform: scale(0.8); }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF div.shop-list__distribution___3Hmfe {
+          display: inline-block;
+          transform: scale(0.8);
+          font-size: .4rem;
+          padding: 0.04rem 0.08rem 0;
+          border-radius: 0.08rem;
+          margin-right: -0.6rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF div.shop-list__distribution___3Hmfe span.shop-list__bird___2ZLB8 {
+            color: #FFFFFF;
+            background-color: #3190e8;
+            border: 0.025rem solid #3190e8; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF div.shop-list__distribution___3Hmfe span.shop-list__ontime___1Z6HR {
+            margin-left: 0.08rem;
+            color: #3190e8;
+            border: 0.025rem solid #3190e8; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 .shop-list__top-item___34-a4 div.shop-list__right___2ILIF div.shop-list__shop-distance___1PMaG {
+          margin-top: 0.4rem;
+          color: #999;
+          transform: scale(0.9);
+          margin-right: -0.2rem; }
+    .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 {
+      border-top: 0.025rem solid #F1F1F1;
+      margin-left: 3.1rem;
+      padding-top: .2rem;
+      display: flex; }
+      .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT {
+        flex: auto;
+        margin-left: -.5rem; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT li {
+          margin-bottom: .2rem; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT li:last-of-type {
+          margin-bottom: 0; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT p {
+          font-size: .266667rem;
+          transform: scale(0.9);
+          color: #999999; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT p span {
+            margin-right: .2rem;
+            color: #FFFFFF;
+            border-radius: .2rem;
+            text-align: center;
+            padding: 0 .1rem; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT p span.shop-list__newUser___2jLkJ {
+            background-color: #70bc46; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT p span.shop-list__subtraction___20niN {
+            background-color: #f07373; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT p span.shop-list__special___1VzQs {
+            background-color: #f1884f; }
+          .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 ul.shop-list__activity-list___3iwiT p span.shop-list__discount___26If4 {
+            background-color: #f07373; }
+      .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 div.shop-list__activity-num___L0tMg {
+        float: right;
+        font-size: .266667rem;
+        color: #999999; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 div.shop-list__activity-num___L0tMg span {
+          position: relative;
+          top: .02rem;
+          left: .1rem;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-width: .15rem;
+          border-style: solid;
+          border-color: #999 transparent transparent transparent;
+          transition: all .4s ease-in-out; }
+        .shop-list__shopList___2eEa2 .shop-list__shop-item___IkDi0 div.shop-list__shop-activity___CHry3 div.shop-list__activity-num___L0tMg.shop-list__rotate___3XZSI span {
+          transform: rotate(180deg);
+          top: -.13rem; }
 .bottom-bar__bottomBar___eAS9m {
   z-index: 1000;
   width: 100%;
