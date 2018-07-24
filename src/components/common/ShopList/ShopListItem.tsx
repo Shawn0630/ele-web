@@ -49,8 +49,8 @@ class ShopListItem extends React.Component<ShopListItemProps> {
                         {this.props.shopListItem.needtip && <span>票</span>}
                     </div>
                     <div className={styles.distribution}>
-                        {this.props.shopListItem.isBird && <span className="bird">蜂鸟专送</span>}
-                        {this.props.shopListItem.isOntime && <span className="ontime">准时达</span>}
+                        {this.props.shopListItem.isBird && <span className={styles.bird}>蜂鸟专送</span>}
+                        {this.props.shopListItem.isOntime && <span className={styles.ontime}>准时达</span>}
                     </div>
                     <div className={styles.shopDistance}>
                         {this.props.shopListItem.distance}公里 / <span>{this.props.shopListItem.needTime}</span>

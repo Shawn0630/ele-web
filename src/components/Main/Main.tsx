@@ -1,6 +1,7 @@
 import * as React from "react";
 import { TopBar } from "../common/TopBar/TopBar";
 import { ShopList } from "../common/ShopList/ShopList";
+import { TakeawayPage } from "../TakeawayPage/TakeawayPage";
 import { BottomBar } from "../common/BottomBar/BottomBar";
 import { Component, toComponent} from "../../models/Component";
 import { Route, RouteComponentProps } from "react-router-dom";
@@ -35,7 +36,7 @@ class Main extends React.Component<MainProps, MainStates> {
             <div id="main">
                 <TopBar component={toComponent(component)}></TopBar>
                 <div>
-                    <Route path="/takeaway" exact={true} component={ShopList}/>
+                    <Route path="/takeaway" exact={true} component={TakeawayPage}/>
                 </div>
                 <BottomBar component={toComponent(component)} toDist={this.toDist}></BottomBar>
             </div>
