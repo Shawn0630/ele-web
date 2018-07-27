@@ -35,7 +35,7 @@ namespace ResultActions {
 }
 
 function getShopList(): ResultActions.GetShopList {
-    return new ResultActions.GetShopList();
+    return new ResultActions.GetShopList().withBuffer();
 }
 
 function getVarietyList(): ResultActions.GetVarietyList {
