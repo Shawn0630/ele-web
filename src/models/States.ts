@@ -1,4 +1,5 @@
-import { Shop } from "./Shop";
+import { com } from "./ele";
+import Shop = com.ele.model.dto.ele.Shop;
 import { Variety } from "./Variety";
 
 interface ResultState {

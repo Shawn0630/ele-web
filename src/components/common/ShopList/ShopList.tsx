@@ -1,7 +1,8 @@
 import * as React from "react";
 import * as styles from "../../../styles/shop-list.scss";
 import { ShopListItem } from "./ShopListItem";
-import { Shop } from "../../../models/Shop";
+import { com } from "../../../models/ele";
+import Shop = com.ele.model.dto.ele.Shop;
 
 interface ShopListProps {
     shops: Shop[];

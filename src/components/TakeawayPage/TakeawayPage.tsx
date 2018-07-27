@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from "../../styles/takeaway.scss";
-import { Shop } from "../../models/Shop";
+import { com } from "../../models/ele";
+import Shop = com.ele.model.dto.ele.Shop;
 import { Variety } from "../../models/Variety";
 import { ShopList } from "../common/ShopList/ShopList";
 import { VarietyList } from "../common/VarietyList/VarietyList";

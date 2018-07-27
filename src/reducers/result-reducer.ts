@@ -1,6 +1,7 @@
 import * as Redux from "redux";
 import { ResultState } from "../models/States";
 import { ResultActions } from "../actions/result-actions";
+import { ApiStatus } from "../actions/api-action";
 
 const defaultState: ResultState = {
     shops: null,
@@ -19,10 +20,25 @@ function reduceResult(state: ResultState = defaultState, action: Redux.Action): 
 }
 
 function reduceGetShopList(state: ResultState, action: ResultActions.GetShopList): ResultState {
-    return {
-        ...state,
-        shops: action.shops
-    };
+    switch (action.status) {
+        case ApiStatus.SUCCESS:
+            return {
+                ...state,
+                shops: action.data
+            };
+        case ApiStatus.INITIALIZE:
+            return {
+                ...state,
+                shops: null
+            };
+        case ApiStatus.FAILURE:
+            return {
+                ...state,
+                shops: null
+            };
+        default:
+            return state;
+    }
 }
 
 function reduceGetVarietyList(state: ResultState, action: ResultActions.GetVarietyList): ResultState {

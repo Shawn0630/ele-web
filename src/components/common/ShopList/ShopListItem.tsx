@@ -1,6 +1,9 @@
 import * as React from "react";
 import * as styles from "../../../styles/shop-list.scss";
-import { Promotion, PromotionType, Shop } from "../../../models/Shop";
+import { com } from "../../../models/ele";
+import Shop = com.ele.model.dto.ele.Shop;
+import PromotionType = com.ele.model.dto.ele.PromotionType;
+import Promotion = com.ele.model.dto.ele.Promotion;
 
 interface ShopListItemProps {
     shopListItem: Shop;
