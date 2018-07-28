@@ -21,7 +21,7 @@ class ShopListItem extends React.Component<ShopListItemProps> {
                  style={this.props.shopListItem.shopActivity && { marginBottom: `${0.2}rem`}}>
                 <div className={styles.left}>
                     <div className={styles.shopImg}>
-                        <img data-normal={this.props.shopListItem.imgUrl} className="lazy-load" />
+                        <img src={this.props.shopListItem.imgUrl}/>
                     </div>
                     {
                         this.props.shopListItem.isNewShop &&
