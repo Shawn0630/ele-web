@@ -3,6 +3,7 @@ export const shopItem: string;
 export const topItem: string;
 export const left: string;
 export const shopImg: string;
+export const img: string;
 export const newShop: string;
 export const shopMes: string;
 export const shopTitle: string;

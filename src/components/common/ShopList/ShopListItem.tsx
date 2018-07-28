@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from "../../../styles/shop-list.scss";
 import { com } from "../../../models/ele";
+import { LoadImage } from "../../common/LoadImage/LoadImage";
 import Shop = com.ele.model.dto.ele.Shop;
 import PromotionType = com.ele.model.dto.ele.PromotionType;
 import Promotion = com.ele.model.dto.ele.Promotion;
@@ -15,13 +16,12 @@ class ShopListItem extends React.Component<ShopListItemProps> {
     }
 
     public render(): JSX.Element {
-
         return <li className={styles.shopItem}>
             <div className={styles.topItem}
                  style={this.props.shopListItem.shopActivity && { marginBottom: `${0.2}rem`}}>
                 <div className={styles.left}>
                     <div className={styles.shopImg}>
-                        <img src={this.props.shopListItem.imgUrl}/>
+                        <LoadImage URL={this.props.shopListItem.imgUrl} className={styles.img}/>
                     </div>
                     {
                         this.props.shopListItem.isNewShop &&
