@@ -19,16 +19,16 @@ class ShopListItem extends React.Component<ShopListItemProps> {
 
     public render(): JSX.Element {
 
-        const placeHolder: JSX.Element = <img src={res.placehoder} className={styles.img}/>
+        const placeHolder: JSX.Element = <img src={res.placehoder} className={styles.img} alt="Placeholder"/>;
 
         return <li className={styles.shopItem}>
             <div className={styles.topItem}
                  style={this.props.shopListItem.shopActivity && { marginBottom: `${0.2}rem`}}>
                 <div className={styles.left}>
                     <div className={styles.shopImg}>
-                        {/* <LazyLoad placeholder={placeHolder}> */}
+                        <LazyLoad offset={0} placeholder={placeHolder}>
                             <LoadImage URL={this.props.shopListItem.imgUrl} className={styles.img}/>
-                        {/* </LazyLoad> */}
+                        </LazyLoad>
                     </div>
                     {
                         this.props.shopListItem.isNewShop &&

@@ -32,11 +32,11 @@ export class LoadImage extends React.PureComponent<LoadImageProps, LoadImageStat
        switch (this.state.loadState) {
             case State.PENDING:
                 return <img src={this.props.URL} className={this.props.className}
-                            onLoad={this.onLoad} onError={this.onError}/>;
+                            onLoad={this.onLoad} onError={this.onError} alt="Loading"/>;
             case State.ERROR:
-                return <img src={res.placehoder} className={this.props.className}/>;
+                return <img src={res.placehoder} className={this.props.className} alt="Error"/>;
             default:
-               return <img src={this.props.URL} className={this.props.className}/>;
+               return <img src={this.props.URL} className={this.props.className} alt="Success"/>;
        }
     }
 
