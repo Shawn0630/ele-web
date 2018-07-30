@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as styles from "../../../styles/load-image.scss";
+import * as res from "../../../styles/images";
 
 enum State {
     PENDING, SUCCESS, ERROR
@@ -33,7 +34,7 @@ export class LoadImage extends React.PureComponent<LoadImageProps, LoadImageStat
                 return <img src={this.props.URL} className={this.props.className}
                             onLoad={this.onLoad} onError={this.onError}/>;
             case State.ERROR:
-                return <img className={`${this.props.className} ${styles.error}`}/>;
+                return <img src={res.placehoder} className={this.props.className}/>;
             default:
                return <img src={this.props.URL} className={this.props.className}/>;
        }
