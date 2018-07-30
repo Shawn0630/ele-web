@@ -4,7 +4,6 @@ import * as ReactRedux from "react-redux";
 import * as ReactDOM from "react-dom";
 import * as ReduxThunk from "redux-thunk";
 import * as ReduxLogger from "redux-logger";
-import { App } from "./components/App";
 import { Root } from "./components/Root/Root";
 import { RootState } from "./models/States";
 import { apiMiddleware } from "./middleware/api-middleware";

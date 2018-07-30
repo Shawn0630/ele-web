@@ -1,5 +1,7 @@
 import * as React from "react";
+import LazyLoad from "react-lazyload"; // tslint:disable-line
 import * as styles from "../../../styles/shop-list.scss";
+import * as res from "../../../styles/images";
 import { com } from "../../../models/ele";
 import { LoadImage } from "../../common/LoadImage/LoadImage";
 import Shop = com.ele.model.dto.ele.Shop;
@@ -16,12 +18,17 @@ class ShopListItem extends React.Component<ShopListItemProps> {
     }
 
     public render(): JSX.Element {
+
+        const placeHolder: JSX.Element = <img src={res.placehoder} className={styles.img}/>
+
         return <li className={styles.shopItem}>
             <div className={styles.topItem}
                  style={this.props.shopListItem.shopActivity && { marginBottom: `${0.2}rem`}}>
                 <div className={styles.left}>
                     <div className={styles.shopImg}>
-                        <LoadImage URL={this.props.shopListItem.imgUrl} className={styles.img}/>
+                        {/* <LazyLoad placeholder={placeHolder}> */}
+                            <LoadImage URL={this.props.shopListItem.imgUrl} className={styles.img}/>
+                        {/* </LazyLoad> */}
                     </div>
                     {
                         this.props.shopListItem.isNewShop &&
