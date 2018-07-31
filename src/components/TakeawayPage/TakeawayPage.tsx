@@ -34,6 +34,8 @@ class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates
         this.state = {
             isTopShow: false
         };
+
+        this.scrollToTop = this.scrollToTop.bind(this);
     }
 
     public componentDidMount(): void {
@@ -62,8 +64,15 @@ class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates
                 <VarietyList varietyDetails={this.props.varieties}></VarietyList>
                 <div className={styles.interval}></div>
                 <ShopList shops={this.props.shops}></ShopList>
-                {this.state.isTopShow && <div className={styles.topIcon}></div>}
+                {this.state.isTopShow && <div className={styles.topIcon} onClick={this.scrollToTop}></div>}
             </div>;
+    }
+
+    private scrollToTop(): void {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+        //$(window).scrollTop(0);
     }
 }
 
