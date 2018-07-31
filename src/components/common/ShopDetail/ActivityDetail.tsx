@@ -1,45 +1,55 @@
 import * as React from "react";
+import * as styles from "../../../styles/activity-detail.scss";
+import { com } from "../../../models/ele";
+import Promotion = com.ele.model.dto.ele.Promotion;
+import PromotionType = com.ele.model.dto.ele.PromotionType;
+import IShopDetail = com.ele.model.dto.ele.IShopDetail;
 
 interface ActivityDetailProps {
+    shop: IShopDetail;
 }
 
-class ActivityDetail extends React.PureComponent {
+class ActivityDetail extends React.PureComponent<ActivityDetailProps> {
+
+    constructor(props: ActivityDetailProps) {
+        super(props);
+    }
 
     public render(): JSX.Element {
         return (
-            <div id="activityDetail">
-                <div className="shop-name">{this.state.shopMes.shopName}</div>
-                <div className="shop-star">
-                    <div className="empty-star"></div>
-                    <div className="full-star" style={{ width: this.state.shopMes.starNum * 1.12 + 'rem' }}></div>
+            <div className={styles.activityDetail}>
+                <div className={styles.shopName}>{this.props.shop.shopName}</div>
+                <div className={styles.shopStar}>
+                    <div className={styles.emptyStar}></div>
+                    <div className={styles.fullStar} style={{ width: `${this.props.shop.starNum * 1.12}rem`}}></div>
                 </div>
-                <div className="discount-mes">
-                    <div className="discount-title">
+                <div className={styles.discountMes}>
+                    <div className={styles.discountTitle}>
                         <span>优惠信息</span>
                     </div>
                     <ul>
                         {
-                            this.state.shopMes.shopActivity.map((item, index) => {
+                            this.props.shop.shopActivity.map((item: Promotion, index: number) => {
                                 return (
                                     <li key={index}>
-                                        {item.variety === 'new' && <span className="new">新</span>}
-                                        {item.variety === 'subtraction' && <span className="subtraction">减</span>}
-                                        {item.variety === 'special' && <span className="special">特</span>}
-                                        {item.variety === 'discount' && <span className="discount">折</span>}
+                                        {item.variety === PromotionType.NEW && <span className={styles.newUser}>新</span>}
+                                        {item.variety === PromotionType.SUBTRACTION && <span className={styles.subtraction}>减</span>}
+                                        {item.variety === PromotionType.SPECIAL && <span className={styles.special}>特</span>}
+                                        {item.variety === PromotionType.DISCOUNT && <span className={styles.discount}>折</span>}
                                         {item.slogan}
                                     </li>
-                                )
+                                );
                             })
                         }
                     </ul>
                 </div>
-                <div className="shop-slogan">
-                    <div className="slogan-title">
+                <div className={styles.shopSlogan}>
+                    <div className={styles.sloganTitle}>
                         <span>商家公告</span>
                     </div>
-                    {this.state.shopMes.slogan}
+                    {this.props.shop.slogan}
                 </div>
-                <div className="back-icon" onClick={this.back}>
+                <div className={styles.backIcon}>
                     <span>X</span>
                 </div>
             </div>
