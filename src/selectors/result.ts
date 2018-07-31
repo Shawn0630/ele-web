@@ -1,9 +1,9 @@
 import { RootState } from "../models/States";
 import { Variety } from "../models/Variety";
 import { com } from "../models/ele";
-import Shop = com.ele.model.dto.ele.Shop;
+import ShopProfile = com.ele.model.dto.ele.ShopProfile;
 
-function shopListSelector(state: RootState): Shop[] {
+function shopListSelector(state: RootState): ShopProfile[] {
     return state.result.shops;
 }
 

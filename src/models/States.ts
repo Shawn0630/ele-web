@@ -1,9 +1,9 @@
 import { com } from "./ele";
-import Shop = com.ele.model.dto.ele.Shop;
+import ShopProfile = com.ele.model.dto.ele.ShopProfile;
 import { Variety } from "./Variety";
 
 interface ResultState {
-    shops: Shop[];
+    shops: ShopProfile[];
     varieties: Variety[];
 }
 

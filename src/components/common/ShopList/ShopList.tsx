@@ -3,10 +3,10 @@ import * as styles from "../../../styles/shop-list.scss";
 import * as Utils from "../../../Utils";
 import { ShopListItem } from "./ShopListItem";
 import { com } from "../../../models/ele";
-import Shop = com.ele.model.dto.ele.Shop;
+import ShopProfile = com.ele.model.dto.ele.ShopProfile;
 
 interface ShopListProps {
-    shops: Shop[];
+    shops: ShopProfile[];
 }
 
 interface ShopListStates {
@@ -24,7 +24,7 @@ class ShopList extends React.Component<ShopListProps> {
 
     public render(): JSX.Element {
         return <div className={styles.shopList} id={"shoplist"}> {
-            this.props.shops.map((item: Shop, index: number) => {
+            this.props.shops.map((item: ShopProfile, index: number) => {
                 return <ShopListItem shopListItem={item} key={`shoplist-${index}`}/>;
             })
         }

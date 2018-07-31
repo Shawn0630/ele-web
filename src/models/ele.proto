@@ -16,7 +16,7 @@ message Promotion {
     string slogan = 2;
 }
 
-message Shop {
+message ShopProfile {
     string imgUrl = 1;
     bool isBrand = 2;
     string shopName = 3;

@@ -118,175 +118,175 @@ export namespace com {
                         public toJSON(): { [k: string]: any };
                     }
 
-                    /** Properties of a Shop. */
-                    interface IShop {
+                    /** Properties of a ShopProfile. */
+                    interface IShopProfile {
 
-                        /** Shop imgUrl */
+                        /** ShopProfile imgUrl */
                         imgUrl?: (string|null);
 
-                        /** Shop isBrand */
+                        /** ShopProfile isBrand */
                         isBrand?: (boolean|null);
 
-                        /** Shop shopName */
+                        /** ShopProfile shopName */
                         shopName?: (string|null);
 
-                        /** Shop starNum */
+                        /** ShopProfile starNum */
                         starNum?: (number|null);
 
-                        /** Shop monthlySales */
+                        /** ShopProfile monthlySales */
                         monthlySales?: (number|null);
 
-                        /** Shop initMoney */
+                        /** ShopProfile initMoney */
                         initMoney?: (number|null);
 
-                        /** Shop deliveryFee */
+                        /** ShopProfile deliveryFee */
                         deliveryFee?: (number|null);
 
-                        /** Shop distance */
+                        /** ShopProfile distance */
                         distance?: (number|null);
 
-                        /** Shop needTime */
+                        /** ShopProfile needTime */
                         needTime?: (string|null);
 
-                        /** Shop isBird */
+                        /** ShopProfile isBird */
                         isBird?: (boolean|null);
 
-                        /** Shop isOntime */
+                        /** ShopProfile isOntime */
                         isOntime?: (boolean|null);
 
-                        /** Shop isInsurance */
+                        /** ShopProfile isInsurance */
                         isInsurance?: (boolean|null);
 
-                        /** Shop needtip */
+                        /** ShopProfile needtip */
                         needtip?: (boolean|null);
 
-                        /** Shop isNewShop */
+                        /** ShopProfile isNewShop */
                         isNewShop?: (boolean|null);
 
-                        /** Shop shopActivity */
+                        /** ShopProfile shopActivity */
                         shopActivity?: (com.ele.model.dto.ele.IPromotion[]|null);
                     }
 
-                    /** Represents a Shop. */
-                    class Shop implements IShop {
+                    /** Represents a ShopProfile. */
+                    class ShopProfile implements IShopProfile {
 
                         /**
-                         * Constructs a new Shop.
+                         * Constructs a new ShopProfile.
                          * @param [properties] Properties to set
                          */
-                        constructor(properties?: com.ele.model.dto.ele.IShop);
+                        constructor(properties?: com.ele.model.dto.ele.IShopProfile);
 
-                        /** Shop imgUrl. */
+                        /** ShopProfile imgUrl. */
                         public imgUrl: string;
 
-                        /** Shop isBrand. */
+                        /** ShopProfile isBrand. */
                         public isBrand: boolean;
 
-                        /** Shop shopName. */
+                        /** ShopProfile shopName. */
                         public shopName: string;
 
-                        /** Shop starNum. */
+                        /** ShopProfile starNum. */
                         public starNum: number;
 
-                        /** Shop monthlySales. */
+                        /** ShopProfile monthlySales. */
                         public monthlySales: number;
 
-                        /** Shop initMoney. */
+                        /** ShopProfile initMoney. */
                         public initMoney: number;
 
-                        /** Shop deliveryFee. */
+                        /** ShopProfile deliveryFee. */
                         public deliveryFee: number;
 
-                        /** Shop distance. */
+                        /** ShopProfile distance. */
                         public distance: number;
 
-                        /** Shop needTime. */
+                        /** ShopProfile needTime. */
                         public needTime: string;
 
-                        /** Shop isBird. */
+                        /** ShopProfile isBird. */
                         public isBird: boolean;
 
-                        /** Shop isOntime. */
+                        /** ShopProfile isOntime. */
                         public isOntime: boolean;
 
-                        /** Shop isInsurance. */
+                        /** ShopProfile isInsurance. */
                         public isInsurance: boolean;
 
-                        /** Shop needtip. */
+                        /** ShopProfile needtip. */
                         public needtip: boolean;
 
-                        /** Shop isNewShop. */
+                        /** ShopProfile isNewShop. */
                         public isNewShop: boolean;
 
-                        /** Shop shopActivity. */
+                        /** ShopProfile shopActivity. */
                         public shopActivity: com.ele.model.dto.ele.IPromotion[];
 
                         /**
-                         * Creates a new Shop instance using the specified properties.
+                         * Creates a new ShopProfile instance using the specified properties.
                          * @param [properties] Properties to set
-                         * @returns Shop instance
+                         * @returns ShopProfile instance
                          */
-                        public static create(properties?: com.ele.model.dto.ele.IShop): com.ele.model.dto.ele.Shop;
+                        public static create(properties?: com.ele.model.dto.ele.IShopProfile): com.ele.model.dto.ele.ShopProfile;
 
                         /**
-                         * Encodes the specified Shop message. Does not implicitly {@link com.ele.model.dto.ele.Shop.verify|verify} messages.
-                         * @param message Shop message or plain object to encode
+                         * Encodes the specified ShopProfile message. Does not implicitly {@link com.ele.model.dto.ele.ShopProfile.verify|verify} messages.
+                         * @param message ShopProfile message or plain object to encode
                          * @param [writer] Writer to encode to
                          * @returns Writer
                          */
-                        public static encode(message: com.ele.model.dto.ele.IShop, writer?: $protobuf.Writer): $protobuf.Writer;
+                        public static encode(message: com.ele.model.dto.ele.IShopProfile, writer?: $protobuf.Writer): $protobuf.Writer;
 
                         /**
-                         * Encodes the specified Shop message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.Shop.verify|verify} messages.
-                         * @param message Shop message or plain object to encode
+                         * Encodes the specified ShopProfile message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.ShopProfile.verify|verify} messages.
+                         * @param message ShopProfile message or plain object to encode
                          * @param [writer] Writer to encode to
                          * @returns Writer
                          */
-                        public static encodeDelimited(message: com.ele.model.dto.ele.IShop, writer?: $protobuf.Writer): $protobuf.Writer;
+                        public static encodeDelimited(message: com.ele.model.dto.ele.IShopProfile, writer?: $protobuf.Writer): $protobuf.Writer;
 
                         /**
-                         * Decodes a Shop message from the specified reader or buffer.
+                         * Decodes a ShopProfile message from the specified reader or buffer.
                          * @param reader Reader or buffer to decode from
                          * @param [length] Message length if known beforehand
-                         * @returns Shop
+                         * @returns ShopProfile
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
-                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): com.ele.model.dto.ele.Shop;
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): com.ele.model.dto.ele.ShopProfile;
 
                         /**
-                         * Decodes a Shop message from the specified reader or buffer, length delimited.
+                         * Decodes a ShopProfile message from the specified reader or buffer, length delimited.
                          * @param reader Reader or buffer to decode from
-                         * @returns Shop
+                         * @returns ShopProfile
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
-                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): com.ele.model.dto.ele.Shop;
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): com.ele.model.dto.ele.ShopProfile;
 
                         /**
-                         * Verifies a Shop message.
+                         * Verifies a ShopProfile message.
                          * @param message Plain object to verify
                          * @returns `null` if valid, otherwise the reason why it is not
                          */
                         public static verify(message: { [k: string]: any }): (string|null);
 
                         /**
-                         * Creates a Shop message from a plain object. Also converts values to their respective internal types.
+                         * Creates a ShopProfile message from a plain object. Also converts values to their respective internal types.
                          * @param object Plain object
-                         * @returns Shop
+                         * @returns ShopProfile
                          */
-                        public static fromObject(object: { [k: string]: any }): com.ele.model.dto.ele.Shop;
+                        public static fromObject(object: { [k: string]: any }): com.ele.model.dto.ele.ShopProfile;
 
                         /**
-                         * Creates a plain object from a Shop message. Also converts values to other types if specified.
-                         * @param message Shop
+                         * Creates a plain object from a ShopProfile message. Also converts values to other types if specified.
+                         * @param message ShopProfile
                          * @param [options] Conversion options
                          * @returns Plain object
                          */
-                        public static toObject(message: com.ele.model.dto.ele.Shop, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                        public static toObject(message: com.ele.model.dto.ele.ShopProfile, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
                         /**
-                         * Converts this Shop to JSON.
+                         * Converts this ShopProfile to JSON.
                          * @returns JSON object
                          */
                         public toJSON(): { [k: string]: any };

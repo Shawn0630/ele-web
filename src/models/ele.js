@@ -305,38 +305,38 @@ $root.com = (function() {
                         return Promotion;
                     })();
 
-                    ele.Shop = (function() {
+                    ele.ShopProfile = (function() {
 
                         /**
-                         * Properties of a Shop.
+                         * Properties of a ShopProfile.
                          * @memberof com.ele.model.dto.ele
-                         * @interface IShop
-                         * @property {string|null} [imgUrl] Shop imgUrl
-                         * @property {boolean|null} [isBrand] Shop isBrand
-                         * @property {string|null} [shopName] Shop shopName
-                         * @property {number|null} [starNum] Shop starNum
-                         * @property {number|null} [monthlySales] Shop monthlySales
-                         * @property {number|null} [initMoney] Shop initMoney
-                         * @property {number|null} [deliveryFee] Shop deliveryFee
-                         * @property {number|null} [distance] Shop distance
-                         * @property {string|null} [needTime] Shop needTime
-                         * @property {boolean|null} [isBird] Shop isBird
-                         * @property {boolean|null} [isOntime] Shop isOntime
-                         * @property {boolean|null} [isInsurance] Shop isInsurance
-                         * @property {boolean|null} [needtip] Shop needtip
-                         * @property {boolean|null} [isNewShop] Shop isNewShop
-                         * @property {Array.<com.ele.model.dto.ele.IPromotion>|null} [shopActivity] Shop shopActivity
+                         * @interface IShopProfile
+                         * @property {string|null} [imgUrl] ShopProfile imgUrl
+                         * @property {boolean|null} [isBrand] ShopProfile isBrand
+                         * @property {string|null} [shopName] ShopProfile shopName
+                         * @property {number|null} [starNum] ShopProfile starNum
+                         * @property {number|null} [monthlySales] ShopProfile monthlySales
+                         * @property {number|null} [initMoney] ShopProfile initMoney
+                         * @property {number|null} [deliveryFee] ShopProfile deliveryFee
+                         * @property {number|null} [distance] ShopProfile distance
+                         * @property {string|null} [needTime] ShopProfile needTime
+                         * @property {boolean|null} [isBird] ShopProfile isBird
+                         * @property {boolean|null} [isOntime] ShopProfile isOntime
+                         * @property {boolean|null} [isInsurance] ShopProfile isInsurance
+                         * @property {boolean|null} [needtip] ShopProfile needtip
+                         * @property {boolean|null} [isNewShop] ShopProfile isNewShop
+                         * @property {Array.<com.ele.model.dto.ele.IPromotion>|null} [shopActivity] ShopProfile shopActivity
                          */
 
                         /**
-                         * Constructs a new Shop.
+                         * Constructs a new ShopProfile.
                          * @memberof com.ele.model.dto.ele
-                         * @classdesc Represents a Shop.
-                         * @implements IShop
+                         * @classdesc Represents a ShopProfile.
+                         * @implements IShopProfile
                          * @constructor
-                         * @param {com.ele.model.dto.ele.IShop=} [properties] Properties to set
+                         * @param {com.ele.model.dto.ele.IShopProfile=} [properties] Properties to set
                          */
-                        function Shop(properties) {
+                        function ShopProfile(properties) {
                             this.shopActivity = [];
                             if (properties)
                                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -345,147 +345,147 @@ $root.com = (function() {
                         }
 
                         /**
-                         * Shop imgUrl.
+                         * ShopProfile imgUrl.
                          * @member {string} imgUrl
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.imgUrl = "";
+                        ShopProfile.prototype.imgUrl = "";
 
                         /**
-                         * Shop isBrand.
+                         * ShopProfile isBrand.
                          * @member {boolean} isBrand
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.isBrand = false;
+                        ShopProfile.prototype.isBrand = false;
 
                         /**
-                         * Shop shopName.
+                         * ShopProfile shopName.
                          * @member {string} shopName
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.shopName = "";
+                        ShopProfile.prototype.shopName = "";
 
                         /**
-                         * Shop starNum.
+                         * ShopProfile starNum.
                          * @member {number} starNum
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.starNum = 0;
+                        ShopProfile.prototype.starNum = 0;
 
                         /**
-                         * Shop monthlySales.
+                         * ShopProfile monthlySales.
                          * @member {number} monthlySales
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.monthlySales = 0;
+                        ShopProfile.prototype.monthlySales = 0;
 
                         /**
-                         * Shop initMoney.
+                         * ShopProfile initMoney.
                          * @member {number} initMoney
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.initMoney = 0;
+                        ShopProfile.prototype.initMoney = 0;
 
                         /**
-                         * Shop deliveryFee.
+                         * ShopProfile deliveryFee.
                          * @member {number} deliveryFee
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.deliveryFee = 0;
+                        ShopProfile.prototype.deliveryFee = 0;
 
                         /**
-                         * Shop distance.
+                         * ShopProfile distance.
                          * @member {number} distance
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.distance = 0;
+                        ShopProfile.prototype.distance = 0;
 
                         /**
-                         * Shop needTime.
+                         * ShopProfile needTime.
                          * @member {string} needTime
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.needTime = "";
+                        ShopProfile.prototype.needTime = "";
 
                         /**
-                         * Shop isBird.
+                         * ShopProfile isBird.
                          * @member {boolean} isBird
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.isBird = false;
+                        ShopProfile.prototype.isBird = false;
 
                         /**
-                         * Shop isOntime.
+                         * ShopProfile isOntime.
                          * @member {boolean} isOntime
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.isOntime = false;
+                        ShopProfile.prototype.isOntime = false;
 
                         /**
-                         * Shop isInsurance.
+                         * ShopProfile isInsurance.
                          * @member {boolean} isInsurance
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.isInsurance = false;
+                        ShopProfile.prototype.isInsurance = false;
 
                         /**
-                         * Shop needtip.
+                         * ShopProfile needtip.
                          * @member {boolean} needtip
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.needtip = false;
+                        ShopProfile.prototype.needtip = false;
 
                         /**
-                         * Shop isNewShop.
+                         * ShopProfile isNewShop.
                          * @member {boolean} isNewShop
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.isNewShop = false;
+                        ShopProfile.prototype.isNewShop = false;
 
                         /**
-                         * Shop shopActivity.
+                         * ShopProfile shopActivity.
                          * @member {Array.<com.ele.model.dto.ele.IPromotion>} shopActivity
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
-                        Shop.prototype.shopActivity = $util.emptyArray;
+                        ShopProfile.prototype.shopActivity = $util.emptyArray;
 
                         /**
-                         * Creates a new Shop instance using the specified properties.
+                         * Creates a new ShopProfile instance using the specified properties.
                          * @function create
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
-                         * @param {com.ele.model.dto.ele.IShop=} [properties] Properties to set
-                         * @returns {com.ele.model.dto.ele.Shop} Shop instance
+                         * @param {com.ele.model.dto.ele.IShopProfile=} [properties] Properties to set
+                         * @returns {com.ele.model.dto.ele.ShopProfile} ShopProfile instance
                          */
-                        Shop.create = function create(properties) {
-                            return new Shop(properties);
+                        ShopProfile.create = function create(properties) {
+                            return new ShopProfile(properties);
                         };
 
                         /**
-                         * Encodes the specified Shop message. Does not implicitly {@link com.ele.model.dto.ele.Shop.verify|verify} messages.
+                         * Encodes the specified ShopProfile message. Does not implicitly {@link com.ele.model.dto.ele.ShopProfile.verify|verify} messages.
                          * @function encode
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
-                         * @param {com.ele.model.dto.ele.IShop} message Shop message or plain object to encode
+                         * @param {com.ele.model.dto.ele.IShopProfile} message ShopProfile message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
-                        Shop.encode = function encode(message, writer) {
+                        ShopProfile.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
                             if (message.imgUrl != null && message.hasOwnProperty("imgUrl"))
@@ -523,33 +523,33 @@ $root.com = (function() {
                         };
 
                         /**
-                         * Encodes the specified Shop message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.Shop.verify|verify} messages.
+                         * Encodes the specified ShopProfile message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.ShopProfile.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
-                         * @param {com.ele.model.dto.ele.IShop} message Shop message or plain object to encode
+                         * @param {com.ele.model.dto.ele.IShopProfile} message ShopProfile message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
-                        Shop.encodeDelimited = function encodeDelimited(message, writer) {
+                        ShopProfile.encodeDelimited = function encodeDelimited(message, writer) {
                             return this.encode(message, writer).ldelim();
                         };
 
                         /**
-                         * Decodes a Shop message from the specified reader or buffer.
+                         * Decodes a ShopProfile message from the specified reader or buffer.
                          * @function decode
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {com.ele.model.dto.ele.Shop} Shop
+                         * @returns {com.ele.model.dto.ele.ShopProfile} ShopProfile
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
-                        Shop.decode = function decode(reader, length) {
+                        ShopProfile.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.ele.model.dto.ele.Shop();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.ele.model.dto.ele.ShopProfile();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -609,30 +609,30 @@ $root.com = (function() {
                         };
 
                         /**
-                         * Decodes a Shop message from the specified reader or buffer, length delimited.
+                         * Decodes a ShopProfile message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {com.ele.model.dto.ele.Shop} Shop
+                         * @returns {com.ele.model.dto.ele.ShopProfile} ShopProfile
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
-                        Shop.decodeDelimited = function decodeDelimited(reader) {
+                        ShopProfile.decodeDelimited = function decodeDelimited(reader) {
                             if (!(reader instanceof $Reader))
                                 reader = new $Reader(reader);
                             return this.decode(reader, reader.uint32());
                         };
 
                         /**
-                         * Verifies a Shop message.
+                         * Verifies a ShopProfile message.
                          * @function verify
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
                          */
-                        Shop.verify = function verify(message) {
+                        ShopProfile.verify = function verify(message) {
                             if (typeof message !== "object" || message === null)
                                 return "object expected";
                             if (message.imgUrl != null && message.hasOwnProperty("imgUrl"))
@@ -690,17 +690,17 @@ $root.com = (function() {
                         };
 
                         /**
-                         * Creates a Shop message from a plain object. Also converts values to their respective internal types.
+                         * Creates a ShopProfile message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {com.ele.model.dto.ele.Shop} Shop
+                         * @returns {com.ele.model.dto.ele.ShopProfile} ShopProfile
                          */
-                        Shop.fromObject = function fromObject(object) {
-                            if (object instanceof $root.com.ele.model.dto.ele.Shop)
+                        ShopProfile.fromObject = function fromObject(object) {
+                            if (object instanceof $root.com.ele.model.dto.ele.ShopProfile)
                                 return object;
-                            var message = new $root.com.ele.model.dto.ele.Shop();
+                            var message = new $root.com.ele.model.dto.ele.ShopProfile();
                             if (object.imgUrl != null)
                                 message.imgUrl = String(object.imgUrl);
                             if (object.isBrand != null)
@@ -731,11 +731,11 @@ $root.com = (function() {
                                 message.isNewShop = Boolean(object.isNewShop);
                             if (object.shopActivity) {
                                 if (!Array.isArray(object.shopActivity))
-                                    throw TypeError(".com.ele.model.dto.ele.Shop.shopActivity: array expected");
+                                    throw TypeError(".com.ele.model.dto.ele.ShopProfile.shopActivity: array expected");
                                 message.shopActivity = [];
                                 for (var i = 0; i < object.shopActivity.length; ++i) {
                                     if (typeof object.shopActivity[i] !== "object")
-                                        throw TypeError(".com.ele.model.dto.ele.Shop.shopActivity: object expected");
+                                        throw TypeError(".com.ele.model.dto.ele.ShopProfile.shopActivity: object expected");
                                     message.shopActivity[i] = $root.com.ele.model.dto.ele.Promotion.fromObject(object.shopActivity[i]);
                                 }
                             }
@@ -743,15 +743,15 @@ $root.com = (function() {
                         };
 
                         /**
-                         * Creates a plain object from a Shop message. Also converts values to other types if specified.
+                         * Creates a plain object from a ShopProfile message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @static
-                         * @param {com.ele.model.dto.ele.Shop} message Shop
+                         * @param {com.ele.model.dto.ele.ShopProfile} message ShopProfile
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
-                        Shop.toObject = function toObject(message, options) {
+                        ShopProfile.toObject = function toObject(message, options) {
                             if (!options)
                                 options = {};
                             var object = {};
@@ -810,17 +810,17 @@ $root.com = (function() {
                         };
 
                         /**
-                         * Converts this Shop to JSON.
+                         * Converts this ShopProfile to JSON.
                          * @function toJSON
-                         * @memberof com.ele.model.dto.ele.Shop
+                         * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
-                        Shop.prototype.toJSON = function toJSON() {
+                        ShopProfile.prototype.toJSON = function toJSON() {
                             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                         };
 
-                        return Shop;
+                        return ShopProfile;
                     })();
 
                     return ele;

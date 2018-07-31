@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as styles from "../../styles/takeaway.scss";
 import { com } from "../../models/ele";
-import Shop = com.ele.model.dto.ele.Shop;
+import ShopProfile = com.ele.model.dto.ele.ShopProfile;
 import { Variety } from "../../models/Variety";
 import { ShopList } from "../common/ShopList/ShopList";
 import { VarietyList } from "../common/VarietyList";
@@ -13,7 +13,7 @@ interface TakeawayPageParams {
 }
 
 interface StateProps {
-    shops: Shop[];
+    shops: ShopProfile[];
     varieties: Variety[];
 }
 
