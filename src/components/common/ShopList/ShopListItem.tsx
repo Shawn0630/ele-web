@@ -12,9 +12,19 @@ interface ShopListItemProps {
     shopListItem: Shop;
 }
 
-class ShopListItem extends React.Component<ShopListItemProps> {
+interface ShopListItemStates {
+    isShowActivity: boolean;
+}
+
+class ShopListItem extends React.Component<ShopListItemProps, ShopListItemStates> {
     constructor(props: ShopListItemProps) {
         super(props);
+
+        this.state = {
+            isShowActivity: false
+        };
+
+        this.showActivity = this.showActivity.bind(this);
     }
 
     public render(): JSX.Element {
@@ -74,7 +84,7 @@ class ShopListItem extends React.Component<ShopListItemProps> {
                         {
                             this.props.shopListItem.shopActivity.map((activity: Promotion, index: number) => {
                                 return (
-                                    (index < 2) &&
+                                    ((index < 2) || this.state.isShowActivity) &&
                                     <li key={index}>
                                         <p>
                                             {activity.variety === PromotionType.NEW &&
@@ -92,12 +102,18 @@ class ShopListItem extends React.Component<ShopListItemProps> {
                             })
                         }
                     </ul>
-                    <div className={styles.activityNum}>
+                    <div className={styles.activityNum} onClick={this.showActivity}>
                         {this.props.shopListItem.shopActivity.length}个活动<span></span>
                     </div>
                 </div>
             }
         </li>;
+    }
+
+    private showActivity(): void {
+        this.setState({
+            isShowActivity: !this.state.isShowActivity
+        });
     }
 }
 
