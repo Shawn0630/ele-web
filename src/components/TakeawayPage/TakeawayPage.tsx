@@ -34,9 +34,23 @@ class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates
         this.state = {
             isTopShow: false
         };
+    }
 
+    public componentDidMount(): void {
         this.props.getShopList();
         this.props.getVarietyList();
+
+        $(window).scroll(() => {
+            if ($(window).scrollTop() > 100) {
+                this.setState({
+                    isTopShow: true
+                });
+            } else {
+                this.setState({
+                    isTopShow: false
+                });
+            }
+        });
     }
 
     public render(): JSX.Element {
@@ -44,7 +58,7 @@ class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates
             return null;
         }
 
-        return <div className={styles.takeawayContainer} ref="takeaway">
+        return <div className={styles.takeawayContainer} id="takeaway">
                 <VarietyList varietyDetails={this.props.varieties}></VarietyList>
                 <div className={styles.interval}></div>
                 <ShopList shops={this.props.shops}></ShopList>

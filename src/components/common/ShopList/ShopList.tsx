@@ -9,14 +9,23 @@ interface ShopListProps {
     shops: Shop[];
 }
 
+interface ShopListStates {
+    isTopShow: boolean;
+}
+
 class ShopList extends React.Component<ShopListProps> {
     constructor(props: ShopListProps) {
         super(props);
+
+        this.state = {
+            isTopShow: true
+        };
     }
+
     public render(): JSX.Element {
-        return <div className={styles.shopList}> {
+        return <div className={styles.shopList} id={"shoplist"}> {
             this.props.shops.map((item: Shop, index: number) => {
-                return <ShopListItem shopListItem={item}/>;
+                return <ShopListItem shopListItem={item} key={`shoplist-${index}`}/>;
             })
         }
         </div>;

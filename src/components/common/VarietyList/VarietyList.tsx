@@ -17,8 +17,8 @@ class VarietyList extends React.Component<VarietyProps> {
                 {
                     this.props.varietyDetails.map((item: Variety, index: number) => {
                         return (
-                            <li key={index}>
-                                <img src={item.imgUrl} />
+                            <li key={`variety-${index}`}>
+                                <img src={item.imgUrl} alt={"variety"}/>
                                 <p>{item.name}</p>
                             </li>
                         );
