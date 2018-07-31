@@ -69,9 +69,7 @@ class TakeawayPage extends React.Component<TakeawayPageProps, TakeawayPageStates
     }
 
     private scrollToTop(): void {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 500);
+        $("html, body").animate({scrollTop: 0}, 500);
         //$(window).scrollTop(0);
     }
 }
