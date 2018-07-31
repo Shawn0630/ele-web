@@ -4,7 +4,7 @@ import { com } from "../../models/ele";
 import Shop = com.ele.model.dto.ele.Shop;
 import { Variety } from "../../models/Variety";
 import { ShopList } from "../common/ShopList/ShopList";
-import { VarietyList } from "../common/VarietyList/VarietyList";
+import { VarietyList } from "../common/VarietyList";
 import { Component, toComponent } from "../../models/Component";
 import { Route, RouteComponentProps } from "react-router-dom";
 

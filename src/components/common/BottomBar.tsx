@@ -1,7 +1,7 @@
 import * as React from "react";
 import { RouteComponentProps} from "react-router-dom";
-import * as styles from "../../../styles/bottom-bar.scss";
-import { Component } from "../../../models/Component";
+import * as styles from "../../styles/bottom-bar.scss";
+import { Component } from "../../models/Component";
 
 interface BottomBarProps {
     component: Component;

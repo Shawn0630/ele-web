@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as styles from "../../../styles/variety-list.scss";
-import { mock, Variety} from "../../../models/Variety";
+import * as styles from "../../styles/variety-list.scss";
+import { mock, Variety} from "../../models/Variety";
 
 interface VarietyProps {
     varietyDetails: Variety[];

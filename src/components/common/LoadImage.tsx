@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as styles from "../../../styles/load-image.scss";
-import * as res from "../../../styles/images";
+import * as styles from "../../styles/load-image.scss";
+import * as res from "../../styles/images";
 
 enum State {
     PENDING, SUCCESS, ERROR

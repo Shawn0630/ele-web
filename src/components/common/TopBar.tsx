@@ -1,8 +1,8 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import * as styles from "../../../styles/top-bar.scss";
+import * as styles from "../../styles/top-bar.scss";
 
-import { Component } from "../../../models/Component";
+import { Component } from "../../models/Component";
 
 interface TopBarContent {
     left: boolean;

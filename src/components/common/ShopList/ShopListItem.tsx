@@ -3,7 +3,7 @@ import LazyLoad from "react-lazyload"; // tslint:disable-line
 import * as styles from "../../../styles/shop-list.scss";
 import * as res from "../../../styles/images";
 import { com } from "../../../models/ele";
-import { LoadImage } from "../../common/LoadImage/LoadImage";
+import { LoadImage } from "../../common/LoadImage";
 import Shop = com.ele.model.dto.ele.Shop;
 import PromotionType = com.ele.model.dto.ele.PromotionType;
 import Promotion = com.ele.model.dto.ele.Promotion;
