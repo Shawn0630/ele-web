@@ -36,6 +36,7 @@ class Main extends React.Component<MainProps, MainStates> {
             <div id="main">
                 <TopBar component={toComponent(component)}></TopBar>
                 <div>
+                    <Route path="/" exact={true} component={TakeawayPage}/>
                     <Route path="/takeaway" exact={true} component={TakeawayPage}/>
                 </div>
                 <BottomBar component={toComponent(component)} toDist={this.toDist}></BottomBar>

@@ -10,11 +10,8 @@ class Root extends React.PureComponent<{}> {
     public render(): JSX.Element {
         return <Router>
             <div>
-            <Route path="/takeaway" exact={true} component={Main}/>
-            <Route path="/search" exact={true} component={Main}/>
-            <Route path="/user" exact={true} component={Main}/>
-            <Route path="/order" exact={true} component={Main}/>
-            <Route path="/shop" exact={true} component={ShopDetail}/>
+            <Route path="/:component(takeaway|search|order|user|)" exact={true} component={Main}/>
+            <Route path="/shop/activity" component={ShopDetail}/>
             </div>
         </Router>;
     }
