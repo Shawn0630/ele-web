@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as styles from "../../../styles/shop-list.scss";
-import * as Utils from "../../../Utils";
 import { ShopListItem } from "./ShopListItem";
 import { com } from "../../../models/ele";
 import ShopProfile = com.ele.model.dto.ele.ShopProfile;

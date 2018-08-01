@@ -3,7 +3,7 @@ import * as Redux from "redux";
 import * as ReactRedux from "react-redux";
 import { withRouter } from "react-router-dom";
 import { DispatchProps, StateProps, TakeawayPage as TakeawayPageComponent } from "./TakeawayPage";
-import {shopListSelector, varietyListSelector } from "../../selectors/result";
+import { shopListSelector, varietyListSelector } from "../../selectors/result";
 import { getShopList, getVarietyList } from "../../actions/result-actions";
 import { RootState } from "../../models/States";
 
