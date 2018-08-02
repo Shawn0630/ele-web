@@ -3,7 +3,7 @@ import * as styles from "../../styles/takeaway.scss";
 import { com } from "../../models/ele";
 import ShopProfile = com.ele.model.dto.ele.ShopProfile;
 import { Variety } from "../../models/Variety";
-import { ShopList } from "../common/ShopList/ShopList";
+import { ShopList } from "../ShopList/ShopList";
 import { VarietyList } from "../common/VarietyList";
 import { Component, toComponent } from "../../models/Component";
 import { Route, RouteComponentProps } from "react-router-dom";

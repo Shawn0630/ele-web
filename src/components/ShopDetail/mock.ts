@@ -1,8 +1,9 @@
-import { com } from "../../../models/ele";
+import { com } from "../../models/ele";
 import PromotionType = com.ele.model.dto.ele.PromotionType;
 import IShopDetail = com.ele.model.dto.ele.IShopDetail;
+import IShopEvalution = com.ele.model.dto.ele.IShopEvaluation;
 
-const mock: IShopDetail = {
+const mockShop: IShopDetail = {
     shopImgUrl: "https://fuss10.elemecdn.com/d/ab/865960541f74551858f8ed9d3685bjpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
     shopName: "港岛记（北京知春路店）",
     shopAddress: "北京市海淀区中关村大街15 - 9号F1-R133、R137、R138",
@@ -166,4 +167,71 @@ const mock: IShopDetail = {
     ]
 };
 
-export { mock };
+const mockEvaluation: IShopEvalution = {
+    score: 4.6,
+    ratio: 49,
+    service: 4.6,
+    dish: 4.7,
+    time: 49,
+     stamps: [
+        {
+            name: "全部",
+            num: 470
+        },
+        {
+            name: "满意",
+            num: 454
+        },
+        {
+            name: "不满意",
+            num: 16
+        },
+        {
+            name: "有图",
+            num: 2
+        },
+        {
+            name: "全部",
+            num: 470
+        },
+        {
+            name: "满意",
+            num: 454
+        },
+        {
+            name: "2333",
+            num: 16
+        },
+        {
+            name: "有图",
+            num: 2
+        }
+    ],
+    comments: [
+        {
+            profileImg: "https://fuss10.elemecdn.com/b/db/1d59ab8629efb12d92fc47a0b83c6jpeg.jpeg?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
+            name: "匿名用户",
+            time: "2017-07-22",
+            foods: ["可乐asdads", "烤翅", "汉堡", "薯条"],
+            content: "整体很好很满意就是我们吃完突然发现少一道菜鸭脖没有给不过吃的还很开心就算了希望下次认真对待哦",
+            costTime: "50",
+            star: 4.7
+        },
+        {
+            profileImg: "https://fuss10.elemecdn.com/b/db/1d59ab8629efb12d92fc47a0b83c6jpeg.jpeg?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
+            name: "匿名用户",
+            time: "2017-07-22",
+            foods: ["可乐", "烤翅"],
+            star: 2
+        },
+        {
+            profileImg: "https://fuss10.elemecdn.com/b/db/1d59ab8629efb12d92fc47a0b83c6jpeg.jpeg?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
+            name: "匿名用户",
+            time: "2017-07-22",
+            foods: ["可乐", "烤翅", "汉堡"],
+            star: 3
+        }
+    ]
+};
+
+export { mockShop, mockEvaluation };

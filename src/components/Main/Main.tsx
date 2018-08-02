@@ -1,6 +1,5 @@
 import * as React from "react";
 import { TopBar } from "../common/TopBar";
-import { ShopList } from "../common/ShopList/ShopList";
 import { TakeawayPage } from "../TakeawayPage";
 import { BottomBar } from "../common/BottomBar";
 import { Component, toComponent} from "../../models/Component";

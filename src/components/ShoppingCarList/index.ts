@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as Redux from "redux";
 import * as ReactRedux from "react-redux";
-import { cartItemsSelector } from "../../../selectors/cart";
-import { getShoppingCart } from "../../../actions/cart-actions";
-import { RootState } from "../../../models/States";
+import { cartItemsSelector } from "../../selectors/cart";
+import { getShoppingCart } from "../../actions/cart-actions";
+import { RootState } from "../../models/States";
 import { DispatchProps, ShoppingCartList as ShoppingCartListComponent, StateProps } from "./ShoppingCartList";
 
 function mapStateToProps(state: RootState, ownProps: {}): StateProps {

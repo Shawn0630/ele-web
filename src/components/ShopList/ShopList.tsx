@@ -1,7 +1,7 @@
 import * as React from "react";
-import * as styles from "../../../styles/shop-list.scss";
+import * as styles from "../../styles/shop-list.scss";
 import { ShopListItem } from "./ShopListItem";
-import { com } from "../../../models/ele";
+import { com } from "../../models/ele";
 import ShopProfile = com.ele.model.dto.ele.ShopProfile;
 
 interface ShopListProps {

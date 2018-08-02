@@ -1,7 +1,7 @@
 import * as React from "react";
-import * as styles from "../../../styles/good-list.scss";
-import { LoadImage } from "../LoadImage";
-import { com } from "../../../models/ele";
+import * as styles from "../../styles/good-list.scss";
+import { LoadImage } from "../common/LoadImage";
+import { com } from "../../models/ele";
 import IGood = com.ele.model.dto.ele.IGood;
 
 interface GoodListItemProps {
@@ -27,7 +27,7 @@ class GoodListItem extends React.PureComponent<GoodListItemProps> {
                         <span>好评率{this.props.goodItem.favorableRate}%</span>
                     </p>
                     <div className={styles.goodPrice}>
-                        <span className="now-price">¥{this.props.goodItem.nowPrice}</span>
+                        <span className={styles.nowPrice}>¥{this.props.goodItem.nowPrice}</span>
                         {this.props.goodItem.oriPrice && <del>¥{this.props.goodItem.oriPrice}</del>}
                         <span className={styles.addGood}></span>
                         {this.props.goodItem.orderNum > 0 && <span className={styles.orderNum}>{this.props.goodItem.orderNum}</span>}

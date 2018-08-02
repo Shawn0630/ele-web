@@ -2,8 +2,7 @@ import * as React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Main } from "../Main/Main";
-import { ActivityDetail } from "../common/ShopDetail/ActivityDetail";
-import { ShopDetail } from "../common/ShopDetail/ShopDetail";
+import { ShopDetail } from "../ShopDetail/ShopDetail";
 
 class Root extends React.PureComponent<{}> {
 

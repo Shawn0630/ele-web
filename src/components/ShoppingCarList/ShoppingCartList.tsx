@@ -1,7 +1,7 @@
 import * as React from "react";
-import * as styles from "../../../styles/good-list.scss";
-import { config } from "../../../config";
-import { ShoppingCartItem } from "../../../models/ShoppingCartItem";
+import * as styles from "../../styles/good-list.scss";
+import { config } from "../../config";
+import { ShoppingCartItem } from "../../models/ShoppingCartItem";
 
 interface StateProps {
     items: ShoppingCartItem[];
@@ -26,6 +26,10 @@ class ShoppingCartList extends React.PureComponent<ShoppingCartListProps, Shoppi
             totalPrice: 0,
             payText: `¥${config.deliveryThresold}元起送`
         };
+    }
+
+    public componentDidMount(): void {
+        this.props.getShoppingCart();
     }
 
     public render(): JSX.Element {

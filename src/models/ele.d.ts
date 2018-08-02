@@ -693,6 +693,354 @@ export namespace com {
                          */
                         public toJSON(): { [k: string]: any };
                     }
+
+                    /** Properties of an EvaluationStamp. */
+                    interface IEvaluationStamp {
+
+                        /** EvaluationStamp name */
+                        name?: (string|null);
+
+                        /** EvaluationStamp num */
+                        num?: (number|null);
+                    }
+
+                    /** Represents an EvaluationStamp. */
+                    class EvaluationStamp implements IEvaluationStamp {
+
+                        /**
+                         * Constructs a new EvaluationStamp.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: com.ele.model.dto.ele.IEvaluationStamp);
+
+                        /** EvaluationStamp name. */
+                        public name: string;
+
+                        /** EvaluationStamp num. */
+                        public num: number;
+
+                        /**
+                         * Creates a new EvaluationStamp instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns EvaluationStamp instance
+                         */
+                        public static create(properties?: com.ele.model.dto.ele.IEvaluationStamp): com.ele.model.dto.ele.EvaluationStamp;
+
+                        /**
+                         * Encodes the specified EvaluationStamp message. Does not implicitly {@link com.ele.model.dto.ele.EvaluationStamp.verify|verify} messages.
+                         * @param message EvaluationStamp message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: com.ele.model.dto.ele.IEvaluationStamp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified EvaluationStamp message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.EvaluationStamp.verify|verify} messages.
+                         * @param message EvaluationStamp message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: com.ele.model.dto.ele.IEvaluationStamp, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes an EvaluationStamp message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns EvaluationStamp
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): com.ele.model.dto.ele.EvaluationStamp;
+
+                        /**
+                         * Decodes an EvaluationStamp message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns EvaluationStamp
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): com.ele.model.dto.ele.EvaluationStamp;
+
+                        /**
+                         * Verifies an EvaluationStamp message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates an EvaluationStamp message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns EvaluationStamp
+                         */
+                        public static fromObject(object: { [k: string]: any }): com.ele.model.dto.ele.EvaluationStamp;
+
+                        /**
+                         * Creates a plain object from an EvaluationStamp message. Also converts values to other types if specified.
+                         * @param message EvaluationStamp
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: com.ele.model.dto.ele.EvaluationStamp, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this EvaluationStamp to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of an EvaluationComment. */
+                    interface IEvaluationComment {
+
+                        /** EvaluationComment profileImg */
+                        profileImg?: (string|null);
+
+                        /** EvaluationComment name */
+                        name?: (string|null);
+
+                        /** EvaluationComment time */
+                        time?: (string|null);
+
+                        /** EvaluationComment foods */
+                        foods?: (string[]|null);
+
+                        /** EvaluationComment content */
+                        content?: (string|null);
+
+                        /** EvaluationComment costTime */
+                        costTime?: (string|null);
+
+                        /** EvaluationComment star */
+                        star?: (number|null);
+                    }
+
+                    /** Represents an EvaluationComment. */
+                    class EvaluationComment implements IEvaluationComment {
+
+                        /**
+                         * Constructs a new EvaluationComment.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: com.ele.model.dto.ele.IEvaluationComment);
+
+                        /** EvaluationComment profileImg. */
+                        public profileImg: string;
+
+                        /** EvaluationComment name. */
+                        public name: string;
+
+                        /** EvaluationComment time. */
+                        public time: string;
+
+                        /** EvaluationComment foods. */
+                        public foods: string[];
+
+                        /** EvaluationComment content. */
+                        public content: string;
+
+                        /** EvaluationComment costTime. */
+                        public costTime: string;
+
+                        /** EvaluationComment star. */
+                        public star: number;
+
+                        /**
+                         * Creates a new EvaluationComment instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns EvaluationComment instance
+                         */
+                        public static create(properties?: com.ele.model.dto.ele.IEvaluationComment): com.ele.model.dto.ele.EvaluationComment;
+
+                        /**
+                         * Encodes the specified EvaluationComment message. Does not implicitly {@link com.ele.model.dto.ele.EvaluationComment.verify|verify} messages.
+                         * @param message EvaluationComment message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: com.ele.model.dto.ele.IEvaluationComment, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified EvaluationComment message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.EvaluationComment.verify|verify} messages.
+                         * @param message EvaluationComment message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: com.ele.model.dto.ele.IEvaluationComment, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes an EvaluationComment message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns EvaluationComment
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): com.ele.model.dto.ele.EvaluationComment;
+
+                        /**
+                         * Decodes an EvaluationComment message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns EvaluationComment
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): com.ele.model.dto.ele.EvaluationComment;
+
+                        /**
+                         * Verifies an EvaluationComment message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates an EvaluationComment message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns EvaluationComment
+                         */
+                        public static fromObject(object: { [k: string]: any }): com.ele.model.dto.ele.EvaluationComment;
+
+                        /**
+                         * Creates a plain object from an EvaluationComment message. Also converts values to other types if specified.
+                         * @param message EvaluationComment
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: com.ele.model.dto.ele.EvaluationComment, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this EvaluationComment to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a ShopEvaluation. */
+                    interface IShopEvaluation {
+
+                        /** ShopEvaluation score */
+                        score?: (number|null);
+
+                        /** ShopEvaluation ratio */
+                        ratio?: (number|null);
+
+                        /** ShopEvaluation service */
+                        service?: (number|null);
+
+                        /** ShopEvaluation dish */
+                        dish?: (number|null);
+
+                        /** ShopEvaluation time */
+                        time?: (number|null);
+
+                        /** ShopEvaluation stamps */
+                        stamps?: (com.ele.model.dto.ele.IEvaluationStamp[]|null);
+
+                        /** ShopEvaluation comments */
+                        comments?: (com.ele.model.dto.ele.IEvaluationComment[]|null);
+                    }
+
+                    /** Represents a ShopEvaluation. */
+                    class ShopEvaluation implements IShopEvaluation {
+
+                        /**
+                         * Constructs a new ShopEvaluation.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: com.ele.model.dto.ele.IShopEvaluation);
+
+                        /** ShopEvaluation score. */
+                        public score: number;
+
+                        /** ShopEvaluation ratio. */
+                        public ratio: number;
+
+                        /** ShopEvaluation service. */
+                        public service: number;
+
+                        /** ShopEvaluation dish. */
+                        public dish: number;
+
+                        /** ShopEvaluation time. */
+                        public time: number;
+
+                        /** ShopEvaluation stamps. */
+                        public stamps: com.ele.model.dto.ele.IEvaluationStamp[];
+
+                        /** ShopEvaluation comments. */
+                        public comments: com.ele.model.dto.ele.IEvaluationComment[];
+
+                        /**
+                         * Creates a new ShopEvaluation instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns ShopEvaluation instance
+                         */
+                        public static create(properties?: com.ele.model.dto.ele.IShopEvaluation): com.ele.model.dto.ele.ShopEvaluation;
+
+                        /**
+                         * Encodes the specified ShopEvaluation message. Does not implicitly {@link com.ele.model.dto.ele.ShopEvaluation.verify|verify} messages.
+                         * @param message ShopEvaluation message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: com.ele.model.dto.ele.IShopEvaluation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified ShopEvaluation message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.ShopEvaluation.verify|verify} messages.
+                         * @param message ShopEvaluation message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: com.ele.model.dto.ele.IShopEvaluation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a ShopEvaluation message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns ShopEvaluation
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): com.ele.model.dto.ele.ShopEvaluation;
+
+                        /**
+                         * Decodes a ShopEvaluation message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns ShopEvaluation
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): com.ele.model.dto.ele.ShopEvaluation;
+
+                        /**
+                         * Verifies a ShopEvaluation message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a ShopEvaluation message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns ShopEvaluation
+                         */
+                        public static fromObject(object: { [k: string]: any }): com.ele.model.dto.ele.ShopEvaluation;
+
+                        /**
+                         * Creates a plain object from a ShopEvaluation message. Also converts values to other types if specified.
+                         * @param message ShopEvaluation
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: com.ele.model.dto.ele.ShopEvaluation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this ShopEvaluation to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
                 }
             }
         }

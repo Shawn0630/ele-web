@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as styles from "../../../styles/activity-detail.scss";
-import { com } from "../../../models/ele";
+import * as styles from "../../styles/activity-detail.scss";
+import { com } from "../../models/ele";
 import Promotion = com.ele.model.dto.ele.Promotion;
 import PromotionType = com.ele.model.dto.ele.PromotionType;
 import IShopDetail = com.ele.model.dto.ele.IShopDetail;

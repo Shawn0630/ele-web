@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as styles from "../../../styles/good-list.scss";
-import { com } from "../../../models/ele";
+import * as styles from "../../styles/good-list.scss";
+import { com } from "../../models/ele";
 import IShopDetail = com.ele.model.dto.ele.IShopDetail;
 import IVariety = com.ele.model.dto.ele.IVariety;
 import IGood = com.ele.model.dto.ele.IGood;

@@ -1937,6 +1937,917 @@ $root.com = (function() {
                         return ShopDetail;
                     })();
 
+                    ele.EvaluationStamp = (function() {
+
+                        /**
+                         * Properties of an EvaluationStamp.
+                         * @memberof com.ele.model.dto.ele
+                         * @interface IEvaluationStamp
+                         * @property {string|null} [name] EvaluationStamp name
+                         * @property {number|null} [num] EvaluationStamp num
+                         */
+
+                        /**
+                         * Constructs a new EvaluationStamp.
+                         * @memberof com.ele.model.dto.ele
+                         * @classdesc Represents an EvaluationStamp.
+                         * @implements IEvaluationStamp
+                         * @constructor
+                         * @param {com.ele.model.dto.ele.IEvaluationStamp=} [properties] Properties to set
+                         */
+                        function EvaluationStamp(properties) {
+                            if (properties)
+                                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                    if (properties[keys[i]] != null)
+                                        this[keys[i]] = properties[keys[i]];
+                        }
+
+                        /**
+                         * EvaluationStamp name.
+                         * @member {string} name
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @instance
+                         */
+                        EvaluationStamp.prototype.name = "";
+
+                        /**
+                         * EvaluationStamp num.
+                         * @member {number} num
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @instance
+                         */
+                        EvaluationStamp.prototype.num = 0;
+
+                        /**
+                         * Creates a new EvaluationStamp instance using the specified properties.
+                         * @function create
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {com.ele.model.dto.ele.IEvaluationStamp=} [properties] Properties to set
+                         * @returns {com.ele.model.dto.ele.EvaluationStamp} EvaluationStamp instance
+                         */
+                        EvaluationStamp.create = function create(properties) {
+                            return new EvaluationStamp(properties);
+                        };
+
+                        /**
+                         * Encodes the specified EvaluationStamp message. Does not implicitly {@link com.ele.model.dto.ele.EvaluationStamp.verify|verify} messages.
+                         * @function encode
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {com.ele.model.dto.ele.IEvaluationStamp} message EvaluationStamp message or plain object to encode
+                         * @param {$protobuf.Writer} [writer] Writer to encode to
+                         * @returns {$protobuf.Writer} Writer
+                         */
+                        EvaluationStamp.encode = function encode(message, writer) {
+                            if (!writer)
+                                writer = $Writer.create();
+                            if (message.name != null && message.hasOwnProperty("name"))
+                                writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+                            if (message.num != null && message.hasOwnProperty("num"))
+                                writer.uint32(/* id 2, wireType 0 =*/16).uint32(message.num);
+                            return writer;
+                        };
+
+                        /**
+                         * Encodes the specified EvaluationStamp message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.EvaluationStamp.verify|verify} messages.
+                         * @function encodeDelimited
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {com.ele.model.dto.ele.IEvaluationStamp} message EvaluationStamp message or plain object to encode
+                         * @param {$protobuf.Writer} [writer] Writer to encode to
+                         * @returns {$protobuf.Writer} Writer
+                         */
+                        EvaluationStamp.encodeDelimited = function encodeDelimited(message, writer) {
+                            return this.encode(message, writer).ldelim();
+                        };
+
+                        /**
+                         * Decodes an EvaluationStamp message from the specified reader or buffer.
+                         * @function decode
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                         * @param {number} [length] Message length if known beforehand
+                         * @returns {com.ele.model.dto.ele.EvaluationStamp} EvaluationStamp
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        EvaluationStamp.decode = function decode(reader, length) {
+                            if (!(reader instanceof $Reader))
+                                reader = $Reader.create(reader);
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.ele.model.dto.ele.EvaluationStamp();
+                            while (reader.pos < end) {
+                                var tag = reader.uint32();
+                                switch (tag >>> 3) {
+                                case 1:
+                                    message.name = reader.string();
+                                    break;
+                                case 2:
+                                    message.num = reader.uint32();
+                                    break;
+                                default:
+                                    reader.skipType(tag & 7);
+                                    break;
+                                }
+                            }
+                            return message;
+                        };
+
+                        /**
+                         * Decodes an EvaluationStamp message from the specified reader or buffer, length delimited.
+                         * @function decodeDelimited
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                         * @returns {com.ele.model.dto.ele.EvaluationStamp} EvaluationStamp
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        EvaluationStamp.decodeDelimited = function decodeDelimited(reader) {
+                            if (!(reader instanceof $Reader))
+                                reader = new $Reader(reader);
+                            return this.decode(reader, reader.uint32());
+                        };
+
+                        /**
+                         * Verifies an EvaluationStamp message.
+                         * @function verify
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {Object.<string,*>} message Plain object to verify
+                         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                         */
+                        EvaluationStamp.verify = function verify(message) {
+                            if (typeof message !== "object" || message === null)
+                                return "object expected";
+                            if (message.name != null && message.hasOwnProperty("name"))
+                                if (!$util.isString(message.name))
+                                    return "name: string expected";
+                            if (message.num != null && message.hasOwnProperty("num"))
+                                if (!$util.isInteger(message.num))
+                                    return "num: integer expected";
+                            return null;
+                        };
+
+                        /**
+                         * Creates an EvaluationStamp message from a plain object. Also converts values to their respective internal types.
+                         * @function fromObject
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {Object.<string,*>} object Plain object
+                         * @returns {com.ele.model.dto.ele.EvaluationStamp} EvaluationStamp
+                         */
+                        EvaluationStamp.fromObject = function fromObject(object) {
+                            if (object instanceof $root.com.ele.model.dto.ele.EvaluationStamp)
+                                return object;
+                            var message = new $root.com.ele.model.dto.ele.EvaluationStamp();
+                            if (object.name != null)
+                                message.name = String(object.name);
+                            if (object.num != null)
+                                message.num = object.num >>> 0;
+                            return message;
+                        };
+
+                        /**
+                         * Creates a plain object from an EvaluationStamp message. Also converts values to other types if specified.
+                         * @function toObject
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @static
+                         * @param {com.ele.model.dto.ele.EvaluationStamp} message EvaluationStamp
+                         * @param {$protobuf.IConversionOptions} [options] Conversion options
+                         * @returns {Object.<string,*>} Plain object
+                         */
+                        EvaluationStamp.toObject = function toObject(message, options) {
+                            if (!options)
+                                options = {};
+                            var object = {};
+                            if (options.defaults) {
+                                object.name = "";
+                                object.num = 0;
+                            }
+                            if (message.name != null && message.hasOwnProperty("name"))
+                                object.name = message.name;
+                            if (message.num != null && message.hasOwnProperty("num"))
+                                object.num = message.num;
+                            return object;
+                        };
+
+                        /**
+                         * Converts this EvaluationStamp to JSON.
+                         * @function toJSON
+                         * @memberof com.ele.model.dto.ele.EvaluationStamp
+                         * @instance
+                         * @returns {Object.<string,*>} JSON object
+                         */
+                        EvaluationStamp.prototype.toJSON = function toJSON() {
+                            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+
+                        return EvaluationStamp;
+                    })();
+
+                    ele.EvaluationComment = (function() {
+
+                        /**
+                         * Properties of an EvaluationComment.
+                         * @memberof com.ele.model.dto.ele
+                         * @interface IEvaluationComment
+                         * @property {string|null} [profileImg] EvaluationComment profileImg
+                         * @property {string|null} [name] EvaluationComment name
+                         * @property {string|null} [time] EvaluationComment time
+                         * @property {Array.<string>|null} [foods] EvaluationComment foods
+                         * @property {string|null} [content] EvaluationComment content
+                         * @property {string|null} [costTime] EvaluationComment costTime
+                         * @property {number|null} [star] EvaluationComment star
+                         */
+
+                        /**
+                         * Constructs a new EvaluationComment.
+                         * @memberof com.ele.model.dto.ele
+                         * @classdesc Represents an EvaluationComment.
+                         * @implements IEvaluationComment
+                         * @constructor
+                         * @param {com.ele.model.dto.ele.IEvaluationComment=} [properties] Properties to set
+                         */
+                        function EvaluationComment(properties) {
+                            this.foods = [];
+                            if (properties)
+                                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                    if (properties[keys[i]] != null)
+                                        this[keys[i]] = properties[keys[i]];
+                        }
+
+                        /**
+                         * EvaluationComment profileImg.
+                         * @member {string} profileImg
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.profileImg = "";
+
+                        /**
+                         * EvaluationComment name.
+                         * @member {string} name
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.name = "";
+
+                        /**
+                         * EvaluationComment time.
+                         * @member {string} time
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.time = "";
+
+                        /**
+                         * EvaluationComment foods.
+                         * @member {Array.<string>} foods
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.foods = $util.emptyArray;
+
+                        /**
+                         * EvaluationComment content.
+                         * @member {string} content
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.content = "";
+
+                        /**
+                         * EvaluationComment costTime.
+                         * @member {string} costTime
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.costTime = "";
+
+                        /**
+                         * EvaluationComment star.
+                         * @member {number} star
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         */
+                        EvaluationComment.prototype.star = 0;
+
+                        /**
+                         * Creates a new EvaluationComment instance using the specified properties.
+                         * @function create
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {com.ele.model.dto.ele.IEvaluationComment=} [properties] Properties to set
+                         * @returns {com.ele.model.dto.ele.EvaluationComment} EvaluationComment instance
+                         */
+                        EvaluationComment.create = function create(properties) {
+                            return new EvaluationComment(properties);
+                        };
+
+                        /**
+                         * Encodes the specified EvaluationComment message. Does not implicitly {@link com.ele.model.dto.ele.EvaluationComment.verify|verify} messages.
+                         * @function encode
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {com.ele.model.dto.ele.IEvaluationComment} message EvaluationComment message or plain object to encode
+                         * @param {$protobuf.Writer} [writer] Writer to encode to
+                         * @returns {$protobuf.Writer} Writer
+                         */
+                        EvaluationComment.encode = function encode(message, writer) {
+                            if (!writer)
+                                writer = $Writer.create();
+                            if (message.profileImg != null && message.hasOwnProperty("profileImg"))
+                                writer.uint32(/* id 1, wireType 2 =*/10).string(message.profileImg);
+                            if (message.name != null && message.hasOwnProperty("name"))
+                                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+                            if (message.time != null && message.hasOwnProperty("time"))
+                                writer.uint32(/* id 3, wireType 2 =*/26).string(message.time);
+                            if (message.foods != null && message.foods.length)
+                                for (var i = 0; i < message.foods.length; ++i)
+                                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.foods[i]);
+                            if (message.content != null && message.hasOwnProperty("content"))
+                                writer.uint32(/* id 5, wireType 2 =*/42).string(message.content);
+                            if (message.costTime != null && message.hasOwnProperty("costTime"))
+                                writer.uint32(/* id 6, wireType 2 =*/50).string(message.costTime);
+                            if (message.star != null && message.hasOwnProperty("star"))
+                                writer.uint32(/* id 7, wireType 1 =*/57).double(message.star);
+                            return writer;
+                        };
+
+                        /**
+                         * Encodes the specified EvaluationComment message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.EvaluationComment.verify|verify} messages.
+                         * @function encodeDelimited
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {com.ele.model.dto.ele.IEvaluationComment} message EvaluationComment message or plain object to encode
+                         * @param {$protobuf.Writer} [writer] Writer to encode to
+                         * @returns {$protobuf.Writer} Writer
+                         */
+                        EvaluationComment.encodeDelimited = function encodeDelimited(message, writer) {
+                            return this.encode(message, writer).ldelim();
+                        };
+
+                        /**
+                         * Decodes an EvaluationComment message from the specified reader or buffer.
+                         * @function decode
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                         * @param {number} [length] Message length if known beforehand
+                         * @returns {com.ele.model.dto.ele.EvaluationComment} EvaluationComment
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        EvaluationComment.decode = function decode(reader, length) {
+                            if (!(reader instanceof $Reader))
+                                reader = $Reader.create(reader);
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.ele.model.dto.ele.EvaluationComment();
+                            while (reader.pos < end) {
+                                var tag = reader.uint32();
+                                switch (tag >>> 3) {
+                                case 1:
+                                    message.profileImg = reader.string();
+                                    break;
+                                case 2:
+                                    message.name = reader.string();
+                                    break;
+                                case 3:
+                                    message.time = reader.string();
+                                    break;
+                                case 4:
+                                    if (!(message.foods && message.foods.length))
+                                        message.foods = [];
+                                    message.foods.push(reader.string());
+                                    break;
+                                case 5:
+                                    message.content = reader.string();
+                                    break;
+                                case 6:
+                                    message.costTime = reader.string();
+                                    break;
+                                case 7:
+                                    message.star = reader.double();
+                                    break;
+                                default:
+                                    reader.skipType(tag & 7);
+                                    break;
+                                }
+                            }
+                            return message;
+                        };
+
+                        /**
+                         * Decodes an EvaluationComment message from the specified reader or buffer, length delimited.
+                         * @function decodeDelimited
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                         * @returns {com.ele.model.dto.ele.EvaluationComment} EvaluationComment
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        EvaluationComment.decodeDelimited = function decodeDelimited(reader) {
+                            if (!(reader instanceof $Reader))
+                                reader = new $Reader(reader);
+                            return this.decode(reader, reader.uint32());
+                        };
+
+                        /**
+                         * Verifies an EvaluationComment message.
+                         * @function verify
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {Object.<string,*>} message Plain object to verify
+                         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                         */
+                        EvaluationComment.verify = function verify(message) {
+                            if (typeof message !== "object" || message === null)
+                                return "object expected";
+                            if (message.profileImg != null && message.hasOwnProperty("profileImg"))
+                                if (!$util.isString(message.profileImg))
+                                    return "profileImg: string expected";
+                            if (message.name != null && message.hasOwnProperty("name"))
+                                if (!$util.isString(message.name))
+                                    return "name: string expected";
+                            if (message.time != null && message.hasOwnProperty("time"))
+                                if (!$util.isString(message.time))
+                                    return "time: string expected";
+                            if (message.foods != null && message.hasOwnProperty("foods")) {
+                                if (!Array.isArray(message.foods))
+                                    return "foods: array expected";
+                                for (var i = 0; i < message.foods.length; ++i)
+                                    if (!$util.isString(message.foods[i]))
+                                        return "foods: string[] expected";
+                            }
+                            if (message.content != null && message.hasOwnProperty("content"))
+                                if (!$util.isString(message.content))
+                                    return "content: string expected";
+                            if (message.costTime != null && message.hasOwnProperty("costTime"))
+                                if (!$util.isString(message.costTime))
+                                    return "costTime: string expected";
+                            if (message.star != null && message.hasOwnProperty("star"))
+                                if (typeof message.star !== "number")
+                                    return "star: number expected";
+                            return null;
+                        };
+
+                        /**
+                         * Creates an EvaluationComment message from a plain object. Also converts values to their respective internal types.
+                         * @function fromObject
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {Object.<string,*>} object Plain object
+                         * @returns {com.ele.model.dto.ele.EvaluationComment} EvaluationComment
+                         */
+                        EvaluationComment.fromObject = function fromObject(object) {
+                            if (object instanceof $root.com.ele.model.dto.ele.EvaluationComment)
+                                return object;
+                            var message = new $root.com.ele.model.dto.ele.EvaluationComment();
+                            if (object.profileImg != null)
+                                message.profileImg = String(object.profileImg);
+                            if (object.name != null)
+                                message.name = String(object.name);
+                            if (object.time != null)
+                                message.time = String(object.time);
+                            if (object.foods) {
+                                if (!Array.isArray(object.foods))
+                                    throw TypeError(".com.ele.model.dto.ele.EvaluationComment.foods: array expected");
+                                message.foods = [];
+                                for (var i = 0; i < object.foods.length; ++i)
+                                    message.foods[i] = String(object.foods[i]);
+                            }
+                            if (object.content != null)
+                                message.content = String(object.content);
+                            if (object.costTime != null)
+                                message.costTime = String(object.costTime);
+                            if (object.star != null)
+                                message.star = Number(object.star);
+                            return message;
+                        };
+
+                        /**
+                         * Creates a plain object from an EvaluationComment message. Also converts values to other types if specified.
+                         * @function toObject
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @static
+                         * @param {com.ele.model.dto.ele.EvaluationComment} message EvaluationComment
+                         * @param {$protobuf.IConversionOptions} [options] Conversion options
+                         * @returns {Object.<string,*>} Plain object
+                         */
+                        EvaluationComment.toObject = function toObject(message, options) {
+                            if (!options)
+                                options = {};
+                            var object = {};
+                            if (options.arrays || options.defaults)
+                                object.foods = [];
+                            if (options.defaults) {
+                                object.profileImg = "";
+                                object.name = "";
+                                object.time = "";
+                                object.content = "";
+                                object.costTime = "";
+                                object.star = 0;
+                            }
+                            if (message.profileImg != null && message.hasOwnProperty("profileImg"))
+                                object.profileImg = message.profileImg;
+                            if (message.name != null && message.hasOwnProperty("name"))
+                                object.name = message.name;
+                            if (message.time != null && message.hasOwnProperty("time"))
+                                object.time = message.time;
+                            if (message.foods && message.foods.length) {
+                                object.foods = [];
+                                for (var j = 0; j < message.foods.length; ++j)
+                                    object.foods[j] = message.foods[j];
+                            }
+                            if (message.content != null && message.hasOwnProperty("content"))
+                                object.content = message.content;
+                            if (message.costTime != null && message.hasOwnProperty("costTime"))
+                                object.costTime = message.costTime;
+                            if (message.star != null && message.hasOwnProperty("star"))
+                                object.star = options.json && !isFinite(message.star) ? String(message.star) : message.star;
+                            return object;
+                        };
+
+                        /**
+                         * Converts this EvaluationComment to JSON.
+                         * @function toJSON
+                         * @memberof com.ele.model.dto.ele.EvaluationComment
+                         * @instance
+                         * @returns {Object.<string,*>} JSON object
+                         */
+                        EvaluationComment.prototype.toJSON = function toJSON() {
+                            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+
+                        return EvaluationComment;
+                    })();
+
+                    ele.ShopEvaluation = (function() {
+
+                        /**
+                         * Properties of a ShopEvaluation.
+                         * @memberof com.ele.model.dto.ele
+                         * @interface IShopEvaluation
+                         * @property {number|null} [score] ShopEvaluation score
+                         * @property {number|null} [ratio] ShopEvaluation ratio
+                         * @property {number|null} [service] ShopEvaluation service
+                         * @property {number|null} [dish] ShopEvaluation dish
+                         * @property {number|null} [time] ShopEvaluation time
+                         * @property {Array.<com.ele.model.dto.ele.IEvaluationStamp>|null} [stamps] ShopEvaluation stamps
+                         * @property {Array.<com.ele.model.dto.ele.IEvaluationComment>|null} [comments] ShopEvaluation comments
+                         */
+
+                        /**
+                         * Constructs a new ShopEvaluation.
+                         * @memberof com.ele.model.dto.ele
+                         * @classdesc Represents a ShopEvaluation.
+                         * @implements IShopEvaluation
+                         * @constructor
+                         * @param {com.ele.model.dto.ele.IShopEvaluation=} [properties] Properties to set
+                         */
+                        function ShopEvaluation(properties) {
+                            this.stamps = [];
+                            this.comments = [];
+                            if (properties)
+                                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                    if (properties[keys[i]] != null)
+                                        this[keys[i]] = properties[keys[i]];
+                        }
+
+                        /**
+                         * ShopEvaluation score.
+                         * @member {number} score
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.score = 0;
+
+                        /**
+                         * ShopEvaluation ratio.
+                         * @member {number} ratio
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.ratio = 0;
+
+                        /**
+                         * ShopEvaluation service.
+                         * @member {number} service
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.service = 0;
+
+                        /**
+                         * ShopEvaluation dish.
+                         * @member {number} dish
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.dish = 0;
+
+                        /**
+                         * ShopEvaluation time.
+                         * @member {number} time
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.time = 0;
+
+                        /**
+                         * ShopEvaluation stamps.
+                         * @member {Array.<com.ele.model.dto.ele.IEvaluationStamp>} stamps
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.stamps = $util.emptyArray;
+
+                        /**
+                         * ShopEvaluation comments.
+                         * @member {Array.<com.ele.model.dto.ele.IEvaluationComment>} comments
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         */
+                        ShopEvaluation.prototype.comments = $util.emptyArray;
+
+                        /**
+                         * Creates a new ShopEvaluation instance using the specified properties.
+                         * @function create
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {com.ele.model.dto.ele.IShopEvaluation=} [properties] Properties to set
+                         * @returns {com.ele.model.dto.ele.ShopEvaluation} ShopEvaluation instance
+                         */
+                        ShopEvaluation.create = function create(properties) {
+                            return new ShopEvaluation(properties);
+                        };
+
+                        /**
+                         * Encodes the specified ShopEvaluation message. Does not implicitly {@link com.ele.model.dto.ele.ShopEvaluation.verify|verify} messages.
+                         * @function encode
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {com.ele.model.dto.ele.IShopEvaluation} message ShopEvaluation message or plain object to encode
+                         * @param {$protobuf.Writer} [writer] Writer to encode to
+                         * @returns {$protobuf.Writer} Writer
+                         */
+                        ShopEvaluation.encode = function encode(message, writer) {
+                            if (!writer)
+                                writer = $Writer.create();
+                            if (message.score != null && message.hasOwnProperty("score"))
+                                writer.uint32(/* id 1, wireType 1 =*/9).double(message.score);
+                            if (message.ratio != null && message.hasOwnProperty("ratio"))
+                                writer.uint32(/* id 2, wireType 1 =*/17).double(message.ratio);
+                            if (message.service != null && message.hasOwnProperty("service"))
+                                writer.uint32(/* id 3, wireType 1 =*/25).double(message.service);
+                            if (message.dish != null && message.hasOwnProperty("dish"))
+                                writer.uint32(/* id 4, wireType 1 =*/33).double(message.dish);
+                            if (message.time != null && message.hasOwnProperty("time"))
+                                writer.uint32(/* id 5, wireType 1 =*/41).double(message.time);
+                            if (message.stamps != null && message.stamps.length)
+                                for (var i = 0; i < message.stamps.length; ++i)
+                                    $root.com.ele.model.dto.ele.EvaluationStamp.encode(message.stamps[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                            if (message.comments != null && message.comments.length)
+                                for (var i = 0; i < message.comments.length; ++i)
+                                    $root.com.ele.model.dto.ele.EvaluationComment.encode(message.comments[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                            return writer;
+                        };
+
+                        /**
+                         * Encodes the specified ShopEvaluation message, length delimited. Does not implicitly {@link com.ele.model.dto.ele.ShopEvaluation.verify|verify} messages.
+                         * @function encodeDelimited
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {com.ele.model.dto.ele.IShopEvaluation} message ShopEvaluation message or plain object to encode
+                         * @param {$protobuf.Writer} [writer] Writer to encode to
+                         * @returns {$protobuf.Writer} Writer
+                         */
+                        ShopEvaluation.encodeDelimited = function encodeDelimited(message, writer) {
+                            return this.encode(message, writer).ldelim();
+                        };
+
+                        /**
+                         * Decodes a ShopEvaluation message from the specified reader or buffer.
+                         * @function decode
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                         * @param {number} [length] Message length if known beforehand
+                         * @returns {com.ele.model.dto.ele.ShopEvaluation} ShopEvaluation
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        ShopEvaluation.decode = function decode(reader, length) {
+                            if (!(reader instanceof $Reader))
+                                reader = $Reader.create(reader);
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.com.ele.model.dto.ele.ShopEvaluation();
+                            while (reader.pos < end) {
+                                var tag = reader.uint32();
+                                switch (tag >>> 3) {
+                                case 1:
+                                    message.score = reader.double();
+                                    break;
+                                case 2:
+                                    message.ratio = reader.double();
+                                    break;
+                                case 3:
+                                    message.service = reader.double();
+                                    break;
+                                case 4:
+                                    message.dish = reader.double();
+                                    break;
+                                case 5:
+                                    message.time = reader.double();
+                                    break;
+                                case 6:
+                                    if (!(message.stamps && message.stamps.length))
+                                        message.stamps = [];
+                                    message.stamps.push($root.com.ele.model.dto.ele.EvaluationStamp.decode(reader, reader.uint32()));
+                                    break;
+                                case 7:
+                                    if (!(message.comments && message.comments.length))
+                                        message.comments = [];
+                                    message.comments.push($root.com.ele.model.dto.ele.EvaluationComment.decode(reader, reader.uint32()));
+                                    break;
+                                default:
+                                    reader.skipType(tag & 7);
+                                    break;
+                                }
+                            }
+                            return message;
+                        };
+
+                        /**
+                         * Decodes a ShopEvaluation message from the specified reader or buffer, length delimited.
+                         * @function decodeDelimited
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                         * @returns {com.ele.model.dto.ele.ShopEvaluation} ShopEvaluation
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        ShopEvaluation.decodeDelimited = function decodeDelimited(reader) {
+                            if (!(reader instanceof $Reader))
+                                reader = new $Reader(reader);
+                            return this.decode(reader, reader.uint32());
+                        };
+
+                        /**
+                         * Verifies a ShopEvaluation message.
+                         * @function verify
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {Object.<string,*>} message Plain object to verify
+                         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                         */
+                        ShopEvaluation.verify = function verify(message) {
+                            if (typeof message !== "object" || message === null)
+                                return "object expected";
+                            if (message.score != null && message.hasOwnProperty("score"))
+                                if (typeof message.score !== "number")
+                                    return "score: number expected";
+                            if (message.ratio != null && message.hasOwnProperty("ratio"))
+                                if (typeof message.ratio !== "number")
+                                    return "ratio: number expected";
+                            if (message.service != null && message.hasOwnProperty("service"))
+                                if (typeof message.service !== "number")
+                                    return "service: number expected";
+                            if (message.dish != null && message.hasOwnProperty("dish"))
+                                if (typeof message.dish !== "number")
+                                    return "dish: number expected";
+                            if (message.time != null && message.hasOwnProperty("time"))
+                                if (typeof message.time !== "number")
+                                    return "time: number expected";
+                            if (message.stamps != null && message.hasOwnProperty("stamps")) {
+                                if (!Array.isArray(message.stamps))
+                                    return "stamps: array expected";
+                                for (var i = 0; i < message.stamps.length; ++i) {
+                                    var error = $root.com.ele.model.dto.ele.EvaluationStamp.verify(message.stamps[i]);
+                                    if (error)
+                                        return "stamps." + error;
+                                }
+                            }
+                            if (message.comments != null && message.hasOwnProperty("comments")) {
+                                if (!Array.isArray(message.comments))
+                                    return "comments: array expected";
+                                for (var i = 0; i < message.comments.length; ++i) {
+                                    var error = $root.com.ele.model.dto.ele.EvaluationComment.verify(message.comments[i]);
+                                    if (error)
+                                        return "comments." + error;
+                                }
+                            }
+                            return null;
+                        };
+
+                        /**
+                         * Creates a ShopEvaluation message from a plain object. Also converts values to their respective internal types.
+                         * @function fromObject
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {Object.<string,*>} object Plain object
+                         * @returns {com.ele.model.dto.ele.ShopEvaluation} ShopEvaluation
+                         */
+                        ShopEvaluation.fromObject = function fromObject(object) {
+                            if (object instanceof $root.com.ele.model.dto.ele.ShopEvaluation)
+                                return object;
+                            var message = new $root.com.ele.model.dto.ele.ShopEvaluation();
+                            if (object.score != null)
+                                message.score = Number(object.score);
+                            if (object.ratio != null)
+                                message.ratio = Number(object.ratio);
+                            if (object.service != null)
+                                message.service = Number(object.service);
+                            if (object.dish != null)
+                                message.dish = Number(object.dish);
+                            if (object.time != null)
+                                message.time = Number(object.time);
+                            if (object.stamps) {
+                                if (!Array.isArray(object.stamps))
+                                    throw TypeError(".com.ele.model.dto.ele.ShopEvaluation.stamps: array expected");
+                                message.stamps = [];
+                                for (var i = 0; i < object.stamps.length; ++i) {
+                                    if (typeof object.stamps[i] !== "object")
+                                        throw TypeError(".com.ele.model.dto.ele.ShopEvaluation.stamps: object expected");
+                                    message.stamps[i] = $root.com.ele.model.dto.ele.EvaluationStamp.fromObject(object.stamps[i]);
+                                }
+                            }
+                            if (object.comments) {
+                                if (!Array.isArray(object.comments))
+                                    throw TypeError(".com.ele.model.dto.ele.ShopEvaluation.comments: array expected");
+                                message.comments = [];
+                                for (var i = 0; i < object.comments.length; ++i) {
+                                    if (typeof object.comments[i] !== "object")
+                                        throw TypeError(".com.ele.model.dto.ele.ShopEvaluation.comments: object expected");
+                                    message.comments[i] = $root.com.ele.model.dto.ele.EvaluationComment.fromObject(object.comments[i]);
+                                }
+                            }
+                            return message;
+                        };
+
+                        /**
+                         * Creates a plain object from a ShopEvaluation message. Also converts values to other types if specified.
+                         * @function toObject
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @static
+                         * @param {com.ele.model.dto.ele.ShopEvaluation} message ShopEvaluation
+                         * @param {$protobuf.IConversionOptions} [options] Conversion options
+                         * @returns {Object.<string,*>} Plain object
+                         */
+                        ShopEvaluation.toObject = function toObject(message, options) {
+                            if (!options)
+                                options = {};
+                            var object = {};
+                            if (options.arrays || options.defaults) {
+                                object.stamps = [];
+                                object.comments = [];
+                            }
+                            if (options.defaults) {
+                                object.score = 0;
+                                object.ratio = 0;
+                                object.service = 0;
+                                object.dish = 0;
+                                object.time = 0;
+                            }
+                            if (message.score != null && message.hasOwnProperty("score"))
+                                object.score = options.json && !isFinite(message.score) ? String(message.score) : message.score;
+                            if (message.ratio != null && message.hasOwnProperty("ratio"))
+                                object.ratio = options.json && !isFinite(message.ratio) ? String(message.ratio) : message.ratio;
+                            if (message.service != null && message.hasOwnProperty("service"))
+                                object.service = options.json && !isFinite(message.service) ? String(message.service) : message.service;
+                            if (message.dish != null && message.hasOwnProperty("dish"))
+                                object.dish = options.json && !isFinite(message.dish) ? String(message.dish) : message.dish;
+                            if (message.time != null && message.hasOwnProperty("time"))
+                                object.time = options.json && !isFinite(message.time) ? String(message.time) : message.time;
+                            if (message.stamps && message.stamps.length) {
+                                object.stamps = [];
+                                for (var j = 0; j < message.stamps.length; ++j)
+                                    object.stamps[j] = $root.com.ele.model.dto.ele.EvaluationStamp.toObject(message.stamps[j], options);
+                            }
+                            if (message.comments && message.comments.length) {
+                                object.comments = [];
+                                for (var j = 0; j < message.comments.length; ++j)
+                                    object.comments[j] = $root.com.ele.model.dto.ele.EvaluationComment.toObject(message.comments[j], options);
+                            }
+                            return object;
+                        };
+
+                        /**
+                         * Converts this ShopEvaluation to JSON.
+                         * @function toJSON
+                         * @memberof com.ele.model.dto.ele.ShopEvaluation
+                         * @instance
+                         * @returns {Object.<string,*>} JSON object
+                         */
+                        ShopEvaluation.prototype.toJSON = function toJSON() {
+                            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                        };
+
+                        return ShopEvaluation;
+                    })();
+
                     return ele;
                 })();
 

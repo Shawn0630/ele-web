@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as styles from "../../../styles/shop-banner.scss";
-import { com } from "../../../models/ele";
+import * as styles from "../../styles/shop-banner.scss";
+import { com } from "../../models/ele";
 import IShopDetail = com.ele.model.dto.ele.IShopDetail;
 
 interface ShopBannerProps {
