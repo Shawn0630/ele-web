@@ -32,8 +32,8 @@ class ShoppingCartList extends React.PureComponent<ShoppingCartListProps, Shoppi
         this.props.getShoppingCart();
     }
 
-    public render(): JSX.Element {
-        return <div>
+    public render(): JSX.Element[] {
+        return [
         <div className={styles.shoppingCar}>
             <div className={styles.carAvatar}>
                 <div className={styles.carImg} ref="carImg">
@@ -46,36 +46,38 @@ class ShoppingCartList extends React.PureComponent<ShoppingCartListProps, Shoppi
             </div>
             <div className={styles.buyIcon} ref="buyIcon">{this.state.payText}</div>
         </div>
-            <div className={styles.mask} ref="mask"></div>
-            <div className={styles.carDetail} ref="carDetail">
-                <div className={styles.topBar}>
-                    <span>购物车</span>
-                    <div className={styles.clear}>
-                        <span></span>
-                        清空
-            </div>
-                </div>
-                <div className={styles.carList}>
-                    <ul>
-                        {
-                            this.props.items.map((item: ShoppingCartItem, index: number) => {
-                                return (
-                                    <li key={index}>
-                                        <span>{item.name}</span>
-                                        <span>¥{item.price}</span>
-                                        <div className={styles.addSub}>
-                                            <span className={styles.img}></span>
-                                            <span className={styles.orderNum}>{item.num}</span>
-                                            <span className={styles.img}></span>
-                                        </div>
-                                    </li>
-                                );
-                            })
-                        }
-                    </ul>
+        ,
+        <div className={styles.mask} ref="mask"></div>
+        ,
+        <div className={styles.carDetail} ref="carDetail">
+            <div className={styles.topBar}>
+                <span>购物车</span>
+                <div className={styles.clear}>
+                    <span></span>
+                    清空
                 </div>
             </div>
-        </div>;
+            <div className={styles.carList}>
+                <ul>
+                    {
+                        this.props.items.map((item: ShoppingCartItem, index: number) => {
+                            return (
+                                <li key={index}>
+                                    <span>{item.name}</span>
+                                    <span>¥{item.price}</span>
+                                    <div className={styles.addSub}>
+                                        <span className={styles.img}></span>
+                                        <span className={styles.orderNum}>{item.num}</span>
+                                        <span className={styles.img}></span>
+                                    </div>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+            </div>
+        </div>
+    ];
     }
 }
 

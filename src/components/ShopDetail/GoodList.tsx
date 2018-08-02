@@ -5,7 +5,7 @@ import IShopDetail = com.ele.model.dto.ele.IShopDetail;
 import IVariety = com.ele.model.dto.ele.IVariety;
 import IGood = com.ele.model.dto.ele.IGood;
 import { GoodListItem } from "./GoodListItem";
-import { ShoppingCartList } from "../ShoppingCarList";
+import { ShoppingCartList } from "../ShoppingCartList";
 
 interface GoodListProps {
     shop: IShopDetail;
