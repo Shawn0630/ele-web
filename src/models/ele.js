@@ -1,4 +1,4 @@
-/*eslint-disable block-scoped-var, id-length, no-control-regex, no-magic-numbers, no-prototype-builtins, no-redeclare, no-shadow, no-var, sort-vars*/
+/*eslint-disable block-scoped-var, no-redeclare, no-control-regex, no-prototype-builtins*/
 "use strict";
 
 var $protobuf = require("protobufjs/minimal");
@@ -56,7 +56,6 @@ $root.com = (function() {
 
                     /**
                      * PromotionType enum.
-                     * @name com.ele.model.dto.ele.PromotionType
                      * @enum {string}
                      * @property {number} NEW=0 NEW value
                      * @property {number} SUBTRACTION=1 SUBTRACTION value
@@ -78,15 +77,14 @@ $root.com = (function() {
                          * Properties of a Promotion.
                          * @memberof com.ele.model.dto.ele
                          * @interface IPromotion
-                         * @property {com.ele.model.dto.ele.PromotionType|null} [variety] Promotion variety
-                         * @property {string|null} [slogan] Promotion slogan
+                         * @property {com.ele.model.dto.ele.PromotionType} [variety] Promotion variety
+                         * @property {string} [slogan] Promotion slogan
                          */
 
                         /**
                          * Constructs a new Promotion.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents a Promotion.
-                         * @implements IPromotion
                          * @constructor
                          * @param {com.ele.model.dto.ele.IPromotion=} [properties] Properties to set
                          */
@@ -99,7 +97,7 @@ $root.com = (function() {
 
                         /**
                          * Promotion variety.
-                         * @member {com.ele.model.dto.ele.PromotionType} variety
+                         * @member {com.ele.model.dto.ele.PromotionType}variety
                          * @memberof com.ele.model.dto.ele.Promotion
                          * @instance
                          */
@@ -107,7 +105,7 @@ $root.com = (function() {
 
                         /**
                          * Promotion slogan.
-                         * @member {string} slogan
+                         * @member {string}slogan
                          * @memberof com.ele.model.dto.ele.Promotion
                          * @instance
                          */
@@ -311,21 +309,20 @@ $root.com = (function() {
                          * Properties of a Good.
                          * @memberof com.ele.model.dto.ele
                          * @interface IGood
-                         * @property {string|null} [imgUrl] Good imgUrl
-                         * @property {string|null} [name] Good name
-                         * @property {string|null} [desc] Good desc
-                         * @property {number|null} [monthSale] Good monthSale
-                         * @property {number|null} [favorableRate] Good favorableRate
-                         * @property {number|null} [oriPrice] Good oriPrice
-                         * @property {number|null} [nowPrice] Good nowPrice
-                         * @property {number|null} [orderNum] Good orderNum
+                         * @property {string} [imgUrl] Good imgUrl
+                         * @property {string} [name] Good name
+                         * @property {string} [desc] Good desc
+                         * @property {number} [monthSale] Good monthSale
+                         * @property {number} [favorableRate] Good favorableRate
+                         * @property {number} [oriPrice] Good oriPrice
+                         * @property {number} [nowPrice] Good nowPrice
+                         * @property {number} [orderNum] Good orderNum
                          */
 
                         /**
                          * Constructs a new Good.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents a Good.
-                         * @implements IGood
                          * @constructor
                          * @param {com.ele.model.dto.ele.IGood=} [properties] Properties to set
                          */
@@ -338,7 +335,7 @@ $root.com = (function() {
 
                         /**
                          * Good imgUrl.
-                         * @member {string} imgUrl
+                         * @member {string}imgUrl
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -346,7 +343,7 @@ $root.com = (function() {
 
                         /**
                          * Good name.
-                         * @member {string} name
+                         * @member {string}name
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -354,7 +351,7 @@ $root.com = (function() {
 
                         /**
                          * Good desc.
-                         * @member {string} desc
+                         * @member {string}desc
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -362,7 +359,7 @@ $root.com = (function() {
 
                         /**
                          * Good monthSale.
-                         * @member {number} monthSale
+                         * @member {number}monthSale
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -370,7 +367,7 @@ $root.com = (function() {
 
                         /**
                          * Good favorableRate.
-                         * @member {number} favorableRate
+                         * @member {number}favorableRate
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -378,7 +375,7 @@ $root.com = (function() {
 
                         /**
                          * Good oriPrice.
-                         * @member {number} oriPrice
+                         * @member {number}oriPrice
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -386,7 +383,7 @@ $root.com = (function() {
 
                         /**
                          * Good nowPrice.
-                         * @member {number} nowPrice
+                         * @member {number}nowPrice
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -394,7 +391,7 @@ $root.com = (function() {
 
                         /**
                          * Good orderNum.
-                         * @member {number} orderNum
+                         * @member {number}orderNum
                          * @memberof com.ele.model.dto.ele.Good
                          * @instance
                          */
@@ -653,17 +650,16 @@ $root.com = (function() {
                          * Properties of a Variety.
                          * @memberof com.ele.model.dto.ele
                          * @interface IVariety
-                         * @property {string|null} [name] Variety name
-                         * @property {number|null} [orderNum] Variety orderNum
-                         * @property {string|null} [desc] Variety desc
-                         * @property {Array.<com.ele.model.dto.ele.IGood>|null} [goodList] Variety goodList
+                         * @property {string} [name] Variety name
+                         * @property {number} [orderNum] Variety orderNum
+                         * @property {string} [desc] Variety desc
+                         * @property {Array.<com.ele.model.dto.ele.IGood>} [goodList] Variety goodList
                          */
 
                         /**
                          * Constructs a new Variety.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents a Variety.
-                         * @implements IVariety
                          * @constructor
                          * @param {com.ele.model.dto.ele.IVariety=} [properties] Properties to set
                          */
@@ -677,7 +673,7 @@ $root.com = (function() {
 
                         /**
                          * Variety name.
-                         * @member {string} name
+                         * @member {string}name
                          * @memberof com.ele.model.dto.ele.Variety
                          * @instance
                          */
@@ -685,7 +681,7 @@ $root.com = (function() {
 
                         /**
                          * Variety orderNum.
-                         * @member {number} orderNum
+                         * @member {number}orderNum
                          * @memberof com.ele.model.dto.ele.Variety
                          * @instance
                          */
@@ -693,7 +689,7 @@ $root.com = (function() {
 
                         /**
                          * Variety desc.
-                         * @member {string} desc
+                         * @member {string}desc
                          * @memberof com.ele.model.dto.ele.Variety
                          * @instance
                          */
@@ -701,7 +697,7 @@ $root.com = (function() {
 
                         /**
                          * Variety goodList.
-                         * @member {Array.<com.ele.model.dto.ele.IGood>} goodList
+                         * @member {Array.<com.ele.model.dto.ele.IGood>}goodList
                          * @memberof com.ele.model.dto.ele.Variety
                          * @instance
                          */
@@ -929,28 +925,27 @@ $root.com = (function() {
                          * Properties of a ShopProfile.
                          * @memberof com.ele.model.dto.ele
                          * @interface IShopProfile
-                         * @property {string|null} [imgUrl] ShopProfile imgUrl
-                         * @property {boolean|null} [isBrand] ShopProfile isBrand
-                         * @property {string|null} [shopName] ShopProfile shopName
-                         * @property {number|null} [starNum] ShopProfile starNum
-                         * @property {number|null} [monthlySales] ShopProfile monthlySales
-                         * @property {number|null} [initMoney] ShopProfile initMoney
-                         * @property {number|null} [deliveryFee] ShopProfile deliveryFee
-                         * @property {number|null} [distance] ShopProfile distance
-                         * @property {string|null} [needTime] ShopProfile needTime
-                         * @property {boolean|null} [isBird] ShopProfile isBird
-                         * @property {boolean|null} [isOntime] ShopProfile isOntime
-                         * @property {boolean|null} [isInsurance] ShopProfile isInsurance
-                         * @property {boolean|null} [needtip] ShopProfile needtip
-                         * @property {boolean|null} [isNewShop] ShopProfile isNewShop
-                         * @property {Array.<com.ele.model.dto.ele.IPromotion>|null} [shopActivity] ShopProfile shopActivity
+                         * @property {string} [imgUrl] ShopProfile imgUrl
+                         * @property {boolean} [isBrand] ShopProfile isBrand
+                         * @property {string} [shopName] ShopProfile shopName
+                         * @property {number} [starNum] ShopProfile starNum
+                         * @property {number} [monthlySales] ShopProfile monthlySales
+                         * @property {number} [initMoney] ShopProfile initMoney
+                         * @property {number} [deliveryFee] ShopProfile deliveryFee
+                         * @property {number} [distance] ShopProfile distance
+                         * @property {string} [needTime] ShopProfile needTime
+                         * @property {boolean} [isBird] ShopProfile isBird
+                         * @property {boolean} [isOntime] ShopProfile isOntime
+                         * @property {boolean} [isInsurance] ShopProfile isInsurance
+                         * @property {boolean} [needtip] ShopProfile needtip
+                         * @property {boolean} [isNewShop] ShopProfile isNewShop
+                         * @property {Array.<com.ele.model.dto.ele.IPromotion>} [shopActivity] ShopProfile shopActivity
                          */
 
                         /**
                          * Constructs a new ShopProfile.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents a ShopProfile.
-                         * @implements IShopProfile
                          * @constructor
                          * @param {com.ele.model.dto.ele.IShopProfile=} [properties] Properties to set
                          */
@@ -964,7 +959,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile imgUrl.
-                         * @member {string} imgUrl
+                         * @member {string}imgUrl
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -972,7 +967,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile isBrand.
-                         * @member {boolean} isBrand
+                         * @member {boolean}isBrand
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -980,7 +975,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile shopName.
-                         * @member {string} shopName
+                         * @member {string}shopName
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -988,7 +983,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile starNum.
-                         * @member {number} starNum
+                         * @member {number}starNum
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -996,7 +991,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile monthlySales.
-                         * @member {number} monthlySales
+                         * @member {number}monthlySales
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1004,7 +999,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile initMoney.
-                         * @member {number} initMoney
+                         * @member {number}initMoney
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1012,7 +1007,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile deliveryFee.
-                         * @member {number} deliveryFee
+                         * @member {number}deliveryFee
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1020,7 +1015,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile distance.
-                         * @member {number} distance
+                         * @member {number}distance
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1028,7 +1023,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile needTime.
-                         * @member {string} needTime
+                         * @member {string}needTime
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1036,7 +1031,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile isBird.
-                         * @member {boolean} isBird
+                         * @member {boolean}isBird
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1044,7 +1039,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile isOntime.
-                         * @member {boolean} isOntime
+                         * @member {boolean}isOntime
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1052,7 +1047,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile isInsurance.
-                         * @member {boolean} isInsurance
+                         * @member {boolean}isInsurance
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1060,7 +1055,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile needtip.
-                         * @member {boolean} needtip
+                         * @member {boolean}needtip
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1068,7 +1063,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile isNewShop.
-                         * @member {boolean} isNewShop
+                         * @member {boolean}isNewShop
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1076,7 +1071,7 @@ $root.com = (function() {
 
                         /**
                          * ShopProfile shopActivity.
-                         * @member {Array.<com.ele.model.dto.ele.IPromotion>} shopActivity
+                         * @member {Array.<com.ele.model.dto.ele.IPromotion>}shopActivity
                          * @memberof com.ele.model.dto.ele.ShopProfile
                          * @instance
                          */
@@ -1447,26 +1442,25 @@ $root.com = (function() {
                          * Properties of a ShopDetail.
                          * @memberof com.ele.model.dto.ele
                          * @interface IShopDetail
-                         * @property {string|null} [shopImgUrl] ShopDetail shopImgUrl
-                         * @property {string|null} [shopName] ShopDetail shopName
-                         * @property {string|null} [shopAddress] ShopDetail shopAddress
-                         * @property {string|null} [shopService] ShopDetail shopService
-                         * @property {string|null} [announcement] ShopDetail announcement
-                         * @property {string|null} [openTime] ShopDetail openTime
-                         * @property {string|null} [slogan] ShopDetail slogan
-                         * @property {number|null} [starNum] ShopDetail starNum
-                         * @property {number|null} [deliveryFee] ShopDetail deliveryFee
-                         * @property {number|null} [sendThreshold] ShopDetail sendThreshold
-                         * @property {number|null} [activityNum] ShopDetail activityNum
-                         * @property {Array.<com.ele.model.dto.ele.IPromotion>|null} [shopActivity] ShopDetail shopActivity
-                         * @property {Array.<com.ele.model.dto.ele.IVariety>|null} [varietyList] ShopDetail varietyList
+                         * @property {string} [shopImgUrl] ShopDetail shopImgUrl
+                         * @property {string} [shopName] ShopDetail shopName
+                         * @property {string} [shopAddress] ShopDetail shopAddress
+                         * @property {string} [shopService] ShopDetail shopService
+                         * @property {string} [announcement] ShopDetail announcement
+                         * @property {string} [openTime] ShopDetail openTime
+                         * @property {string} [slogan] ShopDetail slogan
+                         * @property {number} [starNum] ShopDetail starNum
+                         * @property {number} [deliveryFee] ShopDetail deliveryFee
+                         * @property {number} [sendThreshold] ShopDetail sendThreshold
+                         * @property {number} [activityNum] ShopDetail activityNum
+                         * @property {Array.<com.ele.model.dto.ele.IPromotion>} [shopActivity] ShopDetail shopActivity
+                         * @property {Array.<com.ele.model.dto.ele.IVariety>} [varietyList] ShopDetail varietyList
                          */
 
                         /**
                          * Constructs a new ShopDetail.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents a ShopDetail.
-                         * @implements IShopDetail
                          * @constructor
                          * @param {com.ele.model.dto.ele.IShopDetail=} [properties] Properties to set
                          */
@@ -1481,7 +1475,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail shopImgUrl.
-                         * @member {string} shopImgUrl
+                         * @member {string}shopImgUrl
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1489,7 +1483,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail shopName.
-                         * @member {string} shopName
+                         * @member {string}shopName
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1497,7 +1491,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail shopAddress.
-                         * @member {string} shopAddress
+                         * @member {string}shopAddress
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1505,7 +1499,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail shopService.
-                         * @member {string} shopService
+                         * @member {string}shopService
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1513,7 +1507,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail announcement.
-                         * @member {string} announcement
+                         * @member {string}announcement
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1521,7 +1515,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail openTime.
-                         * @member {string} openTime
+                         * @member {string}openTime
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1529,7 +1523,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail slogan.
-                         * @member {string} slogan
+                         * @member {string}slogan
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1537,7 +1531,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail starNum.
-                         * @member {number} starNum
+                         * @member {number}starNum
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1545,7 +1539,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail deliveryFee.
-                         * @member {number} deliveryFee
+                         * @member {number}deliveryFee
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1553,7 +1547,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail sendThreshold.
-                         * @member {number} sendThreshold
+                         * @member {number}sendThreshold
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1561,7 +1555,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail activityNum.
-                         * @member {number} activityNum
+                         * @member {number}activityNum
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1569,7 +1563,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail shopActivity.
-                         * @member {Array.<com.ele.model.dto.ele.IPromotion>} shopActivity
+                         * @member {Array.<com.ele.model.dto.ele.IPromotion>}shopActivity
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1577,7 +1571,7 @@ $root.com = (function() {
 
                         /**
                          * ShopDetail varietyList.
-                         * @member {Array.<com.ele.model.dto.ele.IVariety>} varietyList
+                         * @member {Array.<com.ele.model.dto.ele.IVariety>}varietyList
                          * @memberof com.ele.model.dto.ele.ShopDetail
                          * @instance
                          */
@@ -1793,7 +1787,7 @@ $root.com = (function() {
                                 if (!Array.isArray(message.varietyList))
                                     return "varietyList: array expected";
                                 for (var i = 0; i < message.varietyList.length; ++i) {
-                                    var error = $root.com.ele.model.dto.ele.Variety.verify(message.varietyList[i]);
+                                    error = $root.com.ele.model.dto.ele.Variety.verify(message.varietyList[i]);
                                     if (error)
                                         return "varietyList." + error;
                                 }
@@ -1943,15 +1937,14 @@ $root.com = (function() {
                          * Properties of an EvaluationStamp.
                          * @memberof com.ele.model.dto.ele
                          * @interface IEvaluationStamp
-                         * @property {string|null} [name] EvaluationStamp name
-                         * @property {number|null} [num] EvaluationStamp num
+                         * @property {string} [name] EvaluationStamp name
+                         * @property {number} [num] EvaluationStamp num
                          */
 
                         /**
                          * Constructs a new EvaluationStamp.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents an EvaluationStamp.
-                         * @implements IEvaluationStamp
                          * @constructor
                          * @param {com.ele.model.dto.ele.IEvaluationStamp=} [properties] Properties to set
                          */
@@ -1964,7 +1957,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationStamp name.
-                         * @member {string} name
+                         * @member {string}name
                          * @memberof com.ele.model.dto.ele.EvaluationStamp
                          * @instance
                          */
@@ -1972,7 +1965,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationStamp num.
-                         * @member {number} num
+                         * @member {number}num
                          * @memberof com.ele.model.dto.ele.EvaluationStamp
                          * @instance
                          */
@@ -2153,20 +2146,19 @@ $root.com = (function() {
                          * Properties of an EvaluationComment.
                          * @memberof com.ele.model.dto.ele
                          * @interface IEvaluationComment
-                         * @property {string|null} [profileImg] EvaluationComment profileImg
-                         * @property {string|null} [name] EvaluationComment name
-                         * @property {string|null} [time] EvaluationComment time
-                         * @property {Array.<string>|null} [foods] EvaluationComment foods
-                         * @property {string|null} [content] EvaluationComment content
-                         * @property {string|null} [costTime] EvaluationComment costTime
-                         * @property {number|null} [star] EvaluationComment star
+                         * @property {string} [profileImg] EvaluationComment profileImg
+                         * @property {string} [name] EvaluationComment name
+                         * @property {string} [time] EvaluationComment time
+                         * @property {Array.<string>} [foods] EvaluationComment foods
+                         * @property {string} [content] EvaluationComment content
+                         * @property {string} [costTime] EvaluationComment costTime
+                         * @property {number} [star] EvaluationComment star
                          */
 
                         /**
                          * Constructs a new EvaluationComment.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents an EvaluationComment.
-                         * @implements IEvaluationComment
                          * @constructor
                          * @param {com.ele.model.dto.ele.IEvaluationComment=} [properties] Properties to set
                          */
@@ -2180,7 +2172,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment profileImg.
-                         * @member {string} profileImg
+                         * @member {string}profileImg
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2188,7 +2180,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment name.
-                         * @member {string} name
+                         * @member {string}name
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2196,7 +2188,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment time.
-                         * @member {string} time
+                         * @member {string}time
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2204,7 +2196,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment foods.
-                         * @member {Array.<string>} foods
+                         * @member {Array.<string>}foods
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2212,7 +2204,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment content.
-                         * @member {string} content
+                         * @member {string}content
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2220,7 +2212,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment costTime.
-                         * @member {string} costTime
+                         * @member {string}costTime
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2228,7 +2220,7 @@ $root.com = (function() {
 
                         /**
                          * EvaluationComment star.
-                         * @member {number} star
+                         * @member {number}star
                          * @memberof com.ele.model.dto.ele.EvaluationComment
                          * @instance
                          */
@@ -2490,20 +2482,19 @@ $root.com = (function() {
                          * Properties of a ShopEvaluation.
                          * @memberof com.ele.model.dto.ele
                          * @interface IShopEvaluation
-                         * @property {number|null} [score] ShopEvaluation score
-                         * @property {number|null} [ratio] ShopEvaluation ratio
-                         * @property {number|null} [service] ShopEvaluation service
-                         * @property {number|null} [dish] ShopEvaluation dish
-                         * @property {number|null} [time] ShopEvaluation time
-                         * @property {Array.<com.ele.model.dto.ele.IEvaluationStamp>|null} [stamps] ShopEvaluation stamps
-                         * @property {Array.<com.ele.model.dto.ele.IEvaluationComment>|null} [comments] ShopEvaluation comments
+                         * @property {number} [score] ShopEvaluation score
+                         * @property {number} [ratio] ShopEvaluation ratio
+                         * @property {number} [service] ShopEvaluation service
+                         * @property {number} [dish] ShopEvaluation dish
+                         * @property {number} [time] ShopEvaluation time
+                         * @property {Array.<com.ele.model.dto.ele.IEvaluationStamp>} [stamps] ShopEvaluation stamps
+                         * @property {Array.<com.ele.model.dto.ele.IEvaluationComment>} [comments] ShopEvaluation comments
                          */
 
                         /**
                          * Constructs a new ShopEvaluation.
                          * @memberof com.ele.model.dto.ele
                          * @classdesc Represents a ShopEvaluation.
-                         * @implements IShopEvaluation
                          * @constructor
                          * @param {com.ele.model.dto.ele.IShopEvaluation=} [properties] Properties to set
                          */
@@ -2518,7 +2509,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation score.
-                         * @member {number} score
+                         * @member {number}score
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2526,7 +2517,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation ratio.
-                         * @member {number} ratio
+                         * @member {number}ratio
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2534,7 +2525,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation service.
-                         * @member {number} service
+                         * @member {number}service
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2542,7 +2533,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation dish.
-                         * @member {number} dish
+                         * @member {number}dish
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2550,7 +2541,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation time.
-                         * @member {number} time
+                         * @member {number}time
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2558,7 +2549,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation stamps.
-                         * @member {Array.<com.ele.model.dto.ele.IEvaluationStamp>} stamps
+                         * @member {Array.<com.ele.model.dto.ele.IEvaluationStamp>}stamps
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2566,7 +2557,7 @@ $root.com = (function() {
 
                         /**
                          * ShopEvaluation comments.
-                         * @member {Array.<com.ele.model.dto.ele.IEvaluationComment>} comments
+                         * @member {Array.<com.ele.model.dto.ele.IEvaluationComment>}comments
                          * @memberof com.ele.model.dto.ele.ShopEvaluation
                          * @instance
                          */
@@ -2734,7 +2725,7 @@ $root.com = (function() {
                                 if (!Array.isArray(message.comments))
                                     return "comments: array expected";
                                 for (var i = 0; i < message.comments.length; ++i) {
-                                    var error = $root.com.ele.model.dto.ele.EvaluationComment.verify(message.comments[i]);
+                                    error = $root.com.ele.model.dto.ele.EvaluationComment.verify(message.comments[i]);
                                     if (error)
                                         return "comments." + error;
                                 }

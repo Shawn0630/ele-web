@@ -1,4 +1,5 @@
 import * as $protobuf from "protobufjs";
+
 /** Namespace com. */
 export namespace com {
 
@@ -26,14 +27,14 @@ export namespace com {
                     interface IPromotion {
 
                         /** Promotion variety */
-                        variety?: (com.ele.model.dto.ele.PromotionType|null);
+                        variety?: com.ele.model.dto.ele.PromotionType;
 
                         /** Promotion slogan */
-                        slogan?: (string|null);
+                        slogan?: string;
                     }
 
                     /** Represents a Promotion. */
-                    class Promotion implements IPromotion {
+                    class Promotion {
 
                         /**
                          * Constructs a new Promotion.
@@ -122,32 +123,32 @@ export namespace com {
                     interface IGood {
 
                         /** Good imgUrl */
-                        imgUrl?: (string|null);
+                        imgUrl?: string;
 
                         /** Good name */
-                        name?: (string|null);
+                        name?: string;
 
                         /** Good desc */
-                        desc?: (string|null);
+                        desc?: string;
 
                         /** Good monthSale */
-                        monthSale?: (number|null);
+                        monthSale?: number;
 
                         /** Good favorableRate */
-                        favorableRate?: (number|null);
+                        favorableRate?: number;
 
                         /** Good oriPrice */
-                        oriPrice?: (number|null);
+                        oriPrice?: number;
 
                         /** Good nowPrice */
-                        nowPrice?: (number|null);
+                        nowPrice?: number;
 
                         /** Good orderNum */
-                        orderNum?: (number|null);
+                        orderNum?: number;
                     }
 
                     /** Represents a Good. */
-                    class Good implements IGood {
+                    class Good {
 
                         /**
                          * Constructs a new Good.
@@ -254,20 +255,20 @@ export namespace com {
                     interface IVariety {
 
                         /** Variety name */
-                        name?: (string|null);
+                        name?: string;
 
                         /** Variety orderNum */
-                        orderNum?: (number|null);
+                        orderNum?: number;
 
                         /** Variety desc */
-                        desc?: (string|null);
+                        desc?: string;
 
                         /** Variety goodList */
-                        goodList?: (com.ele.model.dto.ele.IGood[]|null);
+                        goodList?: com.ele.model.dto.ele.IGood[];
                     }
 
                     /** Represents a Variety. */
-                    class Variety implements IVariety {
+                    class Variety {
 
                         /**
                          * Constructs a new Variety.
@@ -362,53 +363,53 @@ export namespace com {
                     interface IShopProfile {
 
                         /** ShopProfile imgUrl */
-                        imgUrl?: (string|null);
+                        imgUrl?: string;
 
                         /** ShopProfile isBrand */
-                        isBrand?: (boolean|null);
+                        isBrand?: boolean;
 
                         /** ShopProfile shopName */
-                        shopName?: (string|null);
+                        shopName?: string;
 
                         /** ShopProfile starNum */
-                        starNum?: (number|null);
+                        starNum?: number;
 
                         /** ShopProfile monthlySales */
-                        monthlySales?: (number|null);
+                        monthlySales?: number;
 
                         /** ShopProfile initMoney */
-                        initMoney?: (number|null);
+                        initMoney?: number;
 
                         /** ShopProfile deliveryFee */
-                        deliveryFee?: (number|null);
+                        deliveryFee?: number;
 
                         /** ShopProfile distance */
-                        distance?: (number|null);
+                        distance?: number;
 
                         /** ShopProfile needTime */
-                        needTime?: (string|null);
+                        needTime?: string;
 
                         /** ShopProfile isBird */
-                        isBird?: (boolean|null);
+                        isBird?: boolean;
 
                         /** ShopProfile isOntime */
-                        isOntime?: (boolean|null);
+                        isOntime?: boolean;
 
                         /** ShopProfile isInsurance */
-                        isInsurance?: (boolean|null);
+                        isInsurance?: boolean;
 
                         /** ShopProfile needtip */
-                        needtip?: (boolean|null);
+                        needtip?: boolean;
 
                         /** ShopProfile isNewShop */
-                        isNewShop?: (boolean|null);
+                        isNewShop?: boolean;
 
                         /** ShopProfile shopActivity */
-                        shopActivity?: (com.ele.model.dto.ele.IPromotion[]|null);
+                        shopActivity?: com.ele.model.dto.ele.IPromotion[];
                     }
 
                     /** Represents a ShopProfile. */
-                    class ShopProfile implements IShopProfile {
+                    class ShopProfile {
 
                         /**
                          * Constructs a new ShopProfile.
@@ -536,47 +537,47 @@ export namespace com {
                     interface IShopDetail {
 
                         /** ShopDetail shopImgUrl */
-                        shopImgUrl?: (string|null);
+                        shopImgUrl?: string;
 
                         /** ShopDetail shopName */
-                        shopName?: (string|null);
+                        shopName?: string;
 
                         /** ShopDetail shopAddress */
-                        shopAddress?: (string|null);
+                        shopAddress?: string;
 
                         /** ShopDetail shopService */
-                        shopService?: (string|null);
+                        shopService?: string;
 
                         /** ShopDetail announcement */
-                        announcement?: (string|null);
+                        announcement?: string;
 
                         /** ShopDetail openTime */
-                        openTime?: (string|null);
+                        openTime?: string;
 
                         /** ShopDetail slogan */
-                        slogan?: (string|null);
+                        slogan?: string;
 
                         /** ShopDetail starNum */
-                        starNum?: (number|null);
+                        starNum?: number;
 
                         /** ShopDetail deliveryFee */
-                        deliveryFee?: (number|null);
+                        deliveryFee?: number;
 
                         /** ShopDetail sendThreshold */
-                        sendThreshold?: (number|null);
+                        sendThreshold?: number;
 
                         /** ShopDetail activityNum */
-                        activityNum?: (number|null);
+                        activityNum?: number;
 
                         /** ShopDetail shopActivity */
-                        shopActivity?: (com.ele.model.dto.ele.IPromotion[]|null);
+                        shopActivity?: com.ele.model.dto.ele.IPromotion[];
 
                         /** ShopDetail varietyList */
-                        varietyList?: (com.ele.model.dto.ele.IVariety[]|null);
+                        varietyList?: com.ele.model.dto.ele.IVariety[];
                     }
 
                     /** Represents a ShopDetail. */
-                    class ShopDetail implements IShopDetail {
+                    class ShopDetail {
 
                         /**
                          * Constructs a new ShopDetail.
@@ -698,14 +699,14 @@ export namespace com {
                     interface IEvaluationStamp {
 
                         /** EvaluationStamp name */
-                        name?: (string|null);
+                        name?: string;
 
                         /** EvaluationStamp num */
-                        num?: (number|null);
+                        num?: number;
                     }
 
                     /** Represents an EvaluationStamp. */
-                    class EvaluationStamp implements IEvaluationStamp {
+                    class EvaluationStamp {
 
                         /**
                          * Constructs a new EvaluationStamp.
@@ -794,29 +795,29 @@ export namespace com {
                     interface IEvaluationComment {
 
                         /** EvaluationComment profileImg */
-                        profileImg?: (string|null);
+                        profileImg?: string;
 
                         /** EvaluationComment name */
-                        name?: (string|null);
+                        name?: string;
 
                         /** EvaluationComment time */
-                        time?: (string|null);
+                        time?: string;
 
                         /** EvaluationComment foods */
-                        foods?: (string[]|null);
+                        foods?: string[];
 
                         /** EvaluationComment content */
-                        content?: (string|null);
+                        content?: string;
 
                         /** EvaluationComment costTime */
-                        costTime?: (string|null);
+                        costTime?: string;
 
                         /** EvaluationComment star */
-                        star?: (number|null);
+                        star?: number;
                     }
 
                     /** Represents an EvaluationComment. */
-                    class EvaluationComment implements IEvaluationComment {
+                    class EvaluationComment {
 
                         /**
                          * Constructs a new EvaluationComment.
@@ -920,29 +921,29 @@ export namespace com {
                     interface IShopEvaluation {
 
                         /** ShopEvaluation score */
-                        score?: (number|null);
+                        score?: number;
 
                         /** ShopEvaluation ratio */
-                        ratio?: (number|null);
+                        ratio?: number;
 
                         /** ShopEvaluation service */
-                        service?: (number|null);
+                        service?: number;
 
                         /** ShopEvaluation dish */
-                        dish?: (number|null);
+                        dish?: number;
 
                         /** ShopEvaluation time */
-                        time?: (number|null);
+                        time?: number;
 
                         /** ShopEvaluation stamps */
-                        stamps?: (com.ele.model.dto.ele.IEvaluationStamp[]|null);
+                        stamps?: com.ele.model.dto.ele.IEvaluationStamp[];
 
                         /** ShopEvaluation comments */
-                        comments?: (com.ele.model.dto.ele.IEvaluationComment[]|null);
+                        comments?: com.ele.model.dto.ele.IEvaluationComment[];
                     }
 
                     /** Represents a ShopEvaluation. */
-                    class ShopEvaluation implements IShopEvaluation {
+                    class ShopEvaluation {
 
                         /**
                          * Constructs a new ShopEvaluation.
