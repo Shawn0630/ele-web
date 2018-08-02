@@ -3,14 +3,17 @@ import * as styles from "../../styles/shop-banner.scss";
 import { com } from "../../models/ele";
 import IShopDetail = com.ele.model.dto.ele.IShopDetail;
 
-interface ShopBannerProps {
+interface ShopBannerProps  {
     shop: IShopDetail;
+
+    toActivityDetail(): void;
 }
 
 class ShopBanner extends React.PureComponent<ShopBannerProps> {
 
     constructor(props: ShopBannerProps) {
         super(props);
+        this.toActivityDetail = this.toActivityDetail.bind(this);
     }
 
     public render(): JSX.Element {
@@ -19,7 +22,7 @@ class ShopBanner extends React.PureComponent<ShopBannerProps> {
                 <div className={styles.mask}></div>
                 <div className={styles.bg}></div>
                 <div className={styles.backIcon}></div>
-                <div className={styles.shop}>
+                <div className={styles.shop} onClick={this.toActivityDetail}>
                     <div className={styles.shopImg}>
                         <img src={this.props.shop.shopImgUrl} alt={"shopImg"}/>
                     </div>
@@ -39,6 +42,10 @@ class ShopBanner extends React.PureComponent<ShopBannerProps> {
                 </div>
             </div>
         );
+    }
+
+    private toActivityDetail(): void {
+        this.props.toActivityDetail();
     }
 }
 

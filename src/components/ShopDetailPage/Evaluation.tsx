@@ -1,19 +1,19 @@
 import * as React from "react";
 import * as styles from "../../styles/shop-evaluation.scss";
 import { com } from "../../models/ele";
-import IShopEvaluation = com.ele.model.dto.ele.IShopEvaluation;
-import IEvaluationStamp = com.ele.model.dto.ele.IEvaluationStamp;
-import IEvaluationComment = com.ele.model.dto.ele.IEvaluationComment;
+import ShopEvaluation = com.ele.model.dto.ele.ShopEvaluation;
+import EvaluationStamp = com.ele.model.dto.ele.EvaluationStamp;
+import EvaluationComment = com.ele.model.dto.ele.EvaluationComment;
 
 interface ShopEvaluationProps {
-    evaluation: IShopEvaluation;
+    evaluation: ShopEvaluation;
  }
 
 interface ShopEvaluationStates {
 
 }
 
-class ShopEvaluation extends React.PureComponent<ShopEvaluationProps, ShopEvaluationStates> {
+class Evaluation extends React.PureComponent<ShopEvaluationProps, ShopEvaluationStates> {
     constructor(props: ShopEvaluationProps) {
         super(props);
     }
@@ -50,7 +50,7 @@ class ShopEvaluation extends React.PureComponent<ShopEvaluationProps, ShopEvalua
                 <div className={styles.userEvaluation}>
                     <ul className={styles.evaluationVariety} ref="evaluationVariety">
                         {
-                            this.props.evaluation.stamps.map((item: IEvaluationStamp, index: number) => {
+                            this.props.evaluation.stamps.map((item: EvaluationStamp, index: number) => {
                                 return (
                                     <span key={index} className={(index === 0 ? "active" : "") + (item.name === "不满意" ? "bad" : "")}>
                                         {item.name}({item.num})
@@ -61,7 +61,7 @@ class ShopEvaluation extends React.PureComponent<ShopEvaluationProps, ShopEvalua
                     </ul>
                     <ul className={styles.evaluationList}>
                         {
-                            this.props.evaluation.comments.map((item: IEvaluationComment, index: number) => {
+                            this.props.evaluation.comments.map((item: EvaluationComment, index: number) => {
                                 return (
                                     <li key={index}>
                                         <div className={styles.userAvatar}>
@@ -99,4 +99,4 @@ class ShopEvaluation extends React.PureComponent<ShopEvaluationProps, ShopEvalua
     }
 }
 
-export { ShopEvaluation };
+export { Evaluation };

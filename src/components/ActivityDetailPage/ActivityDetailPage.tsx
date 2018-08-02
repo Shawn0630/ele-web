@@ -3,13 +3,19 @@ import * as styles from "../../styles/activity-detail.scss";
 import { com } from "../../models/ele";
 import Promotion = com.ele.model.dto.ele.Promotion;
 import PromotionType = com.ele.model.dto.ele.PromotionType;
-import IShopDetail = com.ele.model.dto.ele.IShopDetail;
+import ShopDetail = com.ele.model.dto.ele.ShopDetail;
 
-interface ActivityDetailProps {
-    shop: IShopDetail;
+interface StateProps {
+    shopDetail: ShopDetail;
 }
 
-class ActivityDetail extends React.PureComponent<ActivityDetailProps> {
+interface DispatchProps {
+    getShopDetail(): void;
+}
+
+interface ActivityDetailProps extends StateProps, DispatchProps {}
+
+class ActivityDetailPage extends React.PureComponent<ActivityDetailProps> {
 
     constructor(props: ActivityDetailProps) {
         super(props);
@@ -18,10 +24,10 @@ class ActivityDetail extends React.PureComponent<ActivityDetailProps> {
     public render(): JSX.Element {
         return (
             <div className={styles.activityDetail}>
-                <div className={styles.shopName}>{this.props.shop.shopName}</div>
+                <div className={styles.shopName}>{this.props.shopDetail.shopName}</div>
                 <div className={styles.shopStar}>
                     <div className={styles.emptyStar}></div>
-                    <div className={styles.fullStar} style={{ width: `${this.props.shop.starNum * 1.12}rem`}}></div>
+                    <div className={styles.fullStar} style={{ width: `${this.props.shopDetail.starNum * 1.12}rem`}}></div>
                 </div>
                 <div className={styles.discountMes}>
                     <div className={styles.discountTitle}>
@@ -29,7 +35,7 @@ class ActivityDetail extends React.PureComponent<ActivityDetailProps> {
                     </div>
                     <ul>
                         {
-                            this.props.shop.shopActivity.map((item: Promotion, index: number) => {
+                            this.props.shopDetail.shopActivity.map((item: Promotion, index: number) => {
                                 return (
                                     <li key={index}>
                                         {item.variety === PromotionType.NEW && <span className={styles.newUser}>新</span>}
@@ -47,7 +53,7 @@ class ActivityDetail extends React.PureComponent<ActivityDetailProps> {
                     <div className={styles.sloganTitle}>
                         <span>商家公告</span>
                     </div>
-                    {this.props.shop.slogan}
+                    {this.props.shopDetail.slogan}
                 </div>
                 <div className={styles.backIcon}>
                     <span>X</span>
@@ -57,4 +63,4 @@ class ActivityDetail extends React.PureComponent<ActivityDetailProps> {
     }
 }
 
-export { ActivityDetail };
+export { ActivityDetailPage, StateProps, DispatchProps };

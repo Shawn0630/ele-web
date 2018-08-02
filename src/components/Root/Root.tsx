@@ -2,7 +2,8 @@ import * as React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Main } from "../Main/Main";
-import { ShopDetail } from "../ShopDetail/ShopDetail";
+import { ShopDetailPage } from "../ShopDetailPage";
+import { ActivityDetailPage } from "../ActivityDetailPage";
 
 class Root extends React.PureComponent<{}> {
 
@@ -10,7 +11,8 @@ class Root extends React.PureComponent<{}> {
         return <Router>
             <div>
             <Route path="/:component(takeaway|search|order|user|)" exact={true} component={Main}/>
-            <Route path="/shop/activity" component={ShopDetail}/>
+            <Route path="/shop" exact={true} component={ShopDetailPage}/>
+                <Route path="/shop/activity" exact={true} component={ActivityDetailPage}/>
             </div>
         </Router>;
     }
