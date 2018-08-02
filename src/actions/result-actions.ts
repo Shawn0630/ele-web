@@ -35,7 +35,7 @@ namespace ResultActions {
 
     export class GetShopDetail extends ApiAction<{}, ArrayBuffer, ShopDetail> {
         constructor() {
-            super(GET_SHOP_DETAIL, "detail", ApiMethod.GET, null);
+            super(GET_SHOP_DETAIL, "shop/detail", ApiMethod.GET, null);
         }
 
         protected convert(data: ArrayBuffer): ShopDetail {
