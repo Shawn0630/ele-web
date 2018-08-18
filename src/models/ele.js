@@ -57,17 +57,19 @@ $root.com = (function() {
                     /**
                      * PromotionType enum.
                      * @enum {string}
-                     * @property {number} NEW=0 NEW value
-                     * @property {number} SUBTRACTION=1 SUBTRACTION value
-                     * @property {number} SPECIAL=2 SPECIAL value
-                     * @property {number} DISCOUNT=3 DISCOUNT value
+                     * @property {number} NONE=0 NONE value
+                     * @property {number} NEW=1 NEW value
+                     * @property {number} SUBTRACTION=2 SUBTRACTION value
+                     * @property {number} SPECIAL=3 SPECIAL value
+                     * @property {number} DISCOUNT=4 DISCOUNT value
                      */
                     ele.PromotionType = (function() {
                         var valuesById = {}, values = Object.create(valuesById);
-                        values[valuesById[0] = "NEW"] = 0;
-                        values[valuesById[1] = "SUBTRACTION"] = 1;
-                        values[valuesById[2] = "SPECIAL"] = 2;
-                        values[valuesById[3] = "DISCOUNT"] = 3;
+                        values[valuesById[0] = "NONE"] = 0;
+                        values[valuesById[1] = "NEW"] = 1;
+                        values[valuesById[2] = "SUBTRACTION"] = 2;
+                        values[valuesById[3] = "SPECIAL"] = 3;
+                        values[valuesById[4] = "DISCOUNT"] = 4;
                         return values;
                     })();
 
@@ -222,6 +224,7 @@ $root.com = (function() {
                                 case 1:
                                 case 2:
                                 case 3:
+                                case 4:
                                     break;
                                 }
                             if (message.slogan != null && message.hasOwnProperty("slogan"))
@@ -243,21 +246,25 @@ $root.com = (function() {
                                 return object;
                             var message = new $root.com.ele.model.dto.ele.Promotion();
                             switch (object.variety) {
-                            case "NEW":
+                            case "NONE":
                             case 0:
                                 message.variety = 0;
                                 break;
-                            case "SUBTRACTION":
+                            case "NEW":
                             case 1:
                                 message.variety = 1;
                                 break;
-                            case "SPECIAL":
+                            case "SUBTRACTION":
                             case 2:
                                 message.variety = 2;
                                 break;
-                            case "DISCOUNT":
+                            case "SPECIAL":
                             case 3:
                                 message.variety = 3;
+                                break;
+                            case "DISCOUNT":
+                            case 4:
+                                message.variety = 4;
                                 break;
                             }
                             if (object.slogan != null)
@@ -279,7 +286,7 @@ $root.com = (function() {
                                 options = {};
                             var object = {};
                             if (options.defaults) {
-                                object.variety = options.enums === String ? "NEW" : 0;
+                                object.variety = options.enums === String ? "NONE" : 0;
                                 object.slogan = "";
                             }
                             if (message.variety != null && message.hasOwnProperty("variety"))
@@ -925,6 +932,7 @@ $root.com = (function() {
                          * Properties of a ShopProfile.
                          * @memberof com.ele.model.dto.ele
                          * @interface IShopProfile
+                         * @property {string} [id] ShopProfile id
                          * @property {string} [imgUrl] ShopProfile imgUrl
                          * @property {boolean} [isBrand] ShopProfile isBrand
                          * @property {string} [shopName] ShopProfile shopName
@@ -956,6 +964,14 @@ $root.com = (function() {
                                     if (properties[keys[i]] != null)
                                         this[keys[i]] = properties[keys[i]];
                         }
+
+                        /**
+                         * ShopProfile id.
+                         * @member {string}id
+                         * @memberof com.ele.model.dto.ele.ShopProfile
+                         * @instance
+                         */
+                        ShopProfile.prototype.id = "";
 
                         /**
                          * ShopProfile imgUrl.
@@ -1101,37 +1117,39 @@ $root.com = (function() {
                         ShopProfile.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
+                            if (message.id != null && message.hasOwnProperty("id"))
+                                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
                             if (message.imgUrl != null && message.hasOwnProperty("imgUrl"))
-                                writer.uint32(/* id 1, wireType 2 =*/10).string(message.imgUrl);
+                                writer.uint32(/* id 2, wireType 2 =*/18).string(message.imgUrl);
                             if (message.isBrand != null && message.hasOwnProperty("isBrand"))
-                                writer.uint32(/* id 2, wireType 0 =*/16).bool(message.isBrand);
+                                writer.uint32(/* id 3, wireType 0 =*/24).bool(message.isBrand);
                             if (message.shopName != null && message.hasOwnProperty("shopName"))
-                                writer.uint32(/* id 3, wireType 2 =*/26).string(message.shopName);
+                                writer.uint32(/* id 4, wireType 2 =*/34).string(message.shopName);
                             if (message.starNum != null && message.hasOwnProperty("starNum"))
-                                writer.uint32(/* id 4, wireType 1 =*/33).double(message.starNum);
+                                writer.uint32(/* id 5, wireType 1 =*/41).double(message.starNum);
                             if (message.monthlySales != null && message.hasOwnProperty("monthlySales"))
-                                writer.uint32(/* id 5, wireType 0 =*/40).uint32(message.monthlySales);
+                                writer.uint32(/* id 6, wireType 0 =*/48).uint32(message.monthlySales);
                             if (message.initMoney != null && message.hasOwnProperty("initMoney"))
-                                writer.uint32(/* id 6, wireType 1 =*/49).double(message.initMoney);
+                                writer.uint32(/* id 7, wireType 1 =*/57).double(message.initMoney);
                             if (message.deliveryFee != null && message.hasOwnProperty("deliveryFee"))
-                                writer.uint32(/* id 7, wireType 1 =*/57).double(message.deliveryFee);
+                                writer.uint32(/* id 8, wireType 1 =*/65).double(message.deliveryFee);
                             if (message.distance != null && message.hasOwnProperty("distance"))
-                                writer.uint32(/* id 8, wireType 1 =*/65).double(message.distance);
+                                writer.uint32(/* id 9, wireType 1 =*/73).double(message.distance);
                             if (message.needTime != null && message.hasOwnProperty("needTime"))
-                                writer.uint32(/* id 9, wireType 2 =*/74).string(message.needTime);
+                                writer.uint32(/* id 10, wireType 2 =*/82).string(message.needTime);
                             if (message.isBird != null && message.hasOwnProperty("isBird"))
-                                writer.uint32(/* id 10, wireType 0 =*/80).bool(message.isBird);
+                                writer.uint32(/* id 11, wireType 0 =*/88).bool(message.isBird);
                             if (message.isOntime != null && message.hasOwnProperty("isOntime"))
-                                writer.uint32(/* id 11, wireType 0 =*/88).bool(message.isOntime);
+                                writer.uint32(/* id 12, wireType 0 =*/96).bool(message.isOntime);
                             if (message.isInsurance != null && message.hasOwnProperty("isInsurance"))
-                                writer.uint32(/* id 12, wireType 0 =*/96).bool(message.isInsurance);
+                                writer.uint32(/* id 13, wireType 0 =*/104).bool(message.isInsurance);
                             if (message.needtip != null && message.hasOwnProperty("needtip"))
-                                writer.uint32(/* id 13, wireType 0 =*/104).bool(message.needtip);
+                                writer.uint32(/* id 14, wireType 0 =*/112).bool(message.needtip);
                             if (message.isNewShop != null && message.hasOwnProperty("isNewShop"))
-                                writer.uint32(/* id 14, wireType 0 =*/112).bool(message.isNewShop);
+                                writer.uint32(/* id 15, wireType 0 =*/120).bool(message.isNewShop);
                             if (message.shopActivity != null && message.shopActivity.length)
                                 for (var i = 0; i < message.shopActivity.length; ++i)
-                                    $root.com.ele.model.dto.ele.Promotion.encode(message.shopActivity[i], writer.uint32(/* id 15, wireType 2 =*/122).fork()).ldelim();
+                                    $root.com.ele.model.dto.ele.Promotion.encode(message.shopActivity[i], writer.uint32(/* id 16, wireType 2 =*/130).fork()).ldelim();
                             return writer;
                         };
 
@@ -1167,48 +1185,51 @@ $root.com = (function() {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
                                 case 1:
-                                    message.imgUrl = reader.string();
+                                    message.id = reader.string();
                                     break;
                                 case 2:
-                                    message.isBrand = reader.bool();
+                                    message.imgUrl = reader.string();
                                     break;
                                 case 3:
-                                    message.shopName = reader.string();
+                                    message.isBrand = reader.bool();
                                     break;
                                 case 4:
-                                    message.starNum = reader.double();
+                                    message.shopName = reader.string();
                                     break;
                                 case 5:
-                                    message.monthlySales = reader.uint32();
+                                    message.starNum = reader.double();
                                     break;
                                 case 6:
-                                    message.initMoney = reader.double();
+                                    message.monthlySales = reader.uint32();
                                     break;
                                 case 7:
-                                    message.deliveryFee = reader.double();
+                                    message.initMoney = reader.double();
                                     break;
                                 case 8:
-                                    message.distance = reader.double();
+                                    message.deliveryFee = reader.double();
                                     break;
                                 case 9:
-                                    message.needTime = reader.string();
+                                    message.distance = reader.double();
                                     break;
                                 case 10:
-                                    message.isBird = reader.bool();
+                                    message.needTime = reader.string();
                                     break;
                                 case 11:
-                                    message.isOntime = reader.bool();
+                                    message.isBird = reader.bool();
                                     break;
                                 case 12:
-                                    message.isInsurance = reader.bool();
+                                    message.isOntime = reader.bool();
                                     break;
                                 case 13:
-                                    message.needtip = reader.bool();
+                                    message.isInsurance = reader.bool();
                                     break;
                                 case 14:
-                                    message.isNewShop = reader.bool();
+                                    message.needtip = reader.bool();
                                     break;
                                 case 15:
+                                    message.isNewShop = reader.bool();
+                                    break;
+                                case 16:
                                     if (!(message.shopActivity && message.shopActivity.length))
                                         message.shopActivity = [];
                                     message.shopActivity.push($root.com.ele.model.dto.ele.Promotion.decode(reader, reader.uint32()));
@@ -1248,6 +1269,9 @@ $root.com = (function() {
                         ShopProfile.verify = function verify(message) {
                             if (typeof message !== "object" || message === null)
                                 return "object expected";
+                            if (message.id != null && message.hasOwnProperty("id"))
+                                if (!$util.isString(message.id))
+                                    return "id: string expected";
                             if (message.imgUrl != null && message.hasOwnProperty("imgUrl"))
                                 if (!$util.isString(message.imgUrl))
                                     return "imgUrl: string expected";
@@ -1314,6 +1338,8 @@ $root.com = (function() {
                             if (object instanceof $root.com.ele.model.dto.ele.ShopProfile)
                                 return object;
                             var message = new $root.com.ele.model.dto.ele.ShopProfile();
+                            if (object.id != null)
+                                message.id = String(object.id);
                             if (object.imgUrl != null)
                                 message.imgUrl = String(object.imgUrl);
                             if (object.isBrand != null)
@@ -1371,6 +1397,7 @@ $root.com = (function() {
                             if (options.arrays || options.defaults)
                                 object.shopActivity = [];
                             if (options.defaults) {
+                                object.id = "";
                                 object.imgUrl = "";
                                 object.isBrand = false;
                                 object.shopName = "";
@@ -1386,6 +1413,8 @@ $root.com = (function() {
                                 object.needtip = false;
                                 object.isNewShop = false;
                             }
+                            if (message.id != null && message.hasOwnProperty("id"))
+                                object.id = message.id;
                             if (message.imgUrl != null && message.hasOwnProperty("imgUrl"))
                                 object.imgUrl = message.imgUrl;
                             if (message.isBrand != null && message.hasOwnProperty("isBrand"))

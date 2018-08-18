@@ -17,10 +17,11 @@ export namespace com {
 
                     /** PromotionType enum. */
                     enum PromotionType {
-                        NEW = 0,
-                        SUBTRACTION = 1,
-                        SPECIAL = 2,
-                        DISCOUNT = 3
+                        NONE = 0,
+                        NEW = 1,
+                        SUBTRACTION = 2,
+                        SPECIAL = 3,
+                        DISCOUNT = 4
                     }
 
                     /** Properties of a Promotion. */
@@ -362,6 +363,9 @@ export namespace com {
                     /** Properties of a ShopProfile. */
                     interface IShopProfile {
 
+                        /** ShopProfile id */
+                        id?: string;
+
                         /** ShopProfile imgUrl */
                         imgUrl?: string;
 
@@ -416,6 +420,9 @@ export namespace com {
                          * @param [properties] Properties to set
                          */
                         constructor(properties?: com.ele.model.dto.ele.IShopProfile);
+
+                        /** ShopProfile id. */
+                        public id: string;
 
                         /** ShopProfile imgUrl. */
                         public imgUrl: string;

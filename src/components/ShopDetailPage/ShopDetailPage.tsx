@@ -29,7 +29,16 @@ class ShopDetailPage extends React.PureComponent<ShopDetailProps> {
         this.toActivityDetail = this.toActivityDetail.bind(this);
     }
 
+    public componentDidMount(): void {
+        this.props.getShopDetail();
+        this.props.getShopEvaluation();
+    }
+
     public render(): JSX.Element {
+        if (this.props.shopDetail == null || this.props.shopEvaluation == null) {
+            return null;
+        }
+
         return <div className={styles.shopDetail}>
             <ShopBanner shop={mockShop} toActivityDetail={this.toActivityDetail}/>
             <div className={styles.switchLabel}>
