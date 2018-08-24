@@ -68,6 +68,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d target",
     "lint": "tslint -c ./tslint.json -p ./tsconfig.json {src,__tests__}/**/*.{ts,tsx}",
-    "proto-update": "cd src/models && pbjs -t static-module -w commonjs -o ele.js ele.proto && pbts -o ele.d.ts ele.js" 
+    "proto-js": "pbjs -t static-module -w commonjs -o src/models/ele.js proto/**/*.proto",
+    "proto-ts": "pbts -o src/models/ele.d.ts src/models/ele.js",
+    "proto": "npm run-script proto-js && npm run-script proto-ts"
   }
 }
